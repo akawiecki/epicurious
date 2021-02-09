@@ -103,93 +103,6 @@ summary {
 </style>
 
 
-<style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 45px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 50px;
-  margin-top: -50px;
-}
-.section h2 {
-  padding-top: 50px;
-  margin-top: -50px;
-}
-.section h3 {
-  padding-top: 50px;
-  margin-top: -50px;
-}
-.section h4 {
-  padding-top: 50px;
-  margin-top: -50px;
-}
-.section h5 {
-  padding-top: 50px;
-  margin-top: -50px;
-}
-.section h6 {
-  padding-top: 50px;
-  margin-top: -50px;
-}
-.dropdown-submenu {
-  position: relative;
-}
-.dropdown-submenu>.dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -6px;
-  margin-left: -1px;
-  border-radius: 0 6px 6px 6px;
-}
-.dropdown-submenu:hover>.dropdown-menu {
-  display: block;
-}
-.dropdown-submenu>a:after {
-  display: block;
-  content: " ";
-  float: right;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 5px 0 5px 5px;
-  border-left-color: #cccccc;
-  margin-top: 5px;
-  margin-right: -10px;
-}
-.dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
-}
-.dropdown-submenu.pull-left {
-  float: none;
-}
-.dropdown-submenu.pull-left>.dropdown-menu {
-  left: -100%;
-  margin-left: 10px;
-  border-radius: 6px 0 6px 6px;
-}
-</style>
-
-<script>
-// manage active state of menu based on current page
-$(document).ready(function () {
-  // active menu anchor
-  href = window.location.pathname
-  href = href.substr(href.lastIndexOf('/') + 1)
-  if (href === "")
-    href = "index.html";
-  var menuAnchor = $('a[href="' + href + '"]');
-
-  // mark it active
-  menuAnchor.parent().addClass('active');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
-});
-</script>
 
 <!-- tabsets -->
 
@@ -335,27 +248,6 @@ div.tocify {
 
 
 
-
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">Home</a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div><!--/.container -->
-</div><!--/.navbar -->
 
 <div class="fluid-row" id="header">
 
@@ -1468,10 +1360,14 @@ d$A &lt;- rethinking::standardize(d$MedianAgeMarriage)</code></pre>
 ) , data = d )
 
 precis(m5.1)</code></pre>
-<pre><code>##                mean         sd       5.5%      94.5%
-## a     -1.565886e-08 0.09737878 -0.1556301  0.1556301
-## bA    -5.684034e-01 0.10999982 -0.7442044 -0.3926024
-## sigma  7.883258e-01 0.07801137  0.6636486  0.9130031</code></pre>
+<pre><code>##                mean         sd       5.5%
+## a      2.356211e-05 0.09737878 -0.1556065
+## bA    -5.684173e-01 0.10999969 -0.7442180
+## sigma  7.883258e-01 0.07801135  0.6636486
+##            94.5%
+## a      0.1556537
+## bA    -0.3926165
+## sigma  0.9130030</code></pre>
 <p>The outcome and the predictor are both standardized, the intercept α should end up very close to zero.</p>
 <p>What does the prior slope <span class="math inline">\(\beta_{A}\)</span> imply? If <span class="math inline">\(\beta_{A}\)</span> = 1, that would imply that a change of one standard deviation in age at marriage is associated likewise with a change of one standard deviation in divorce. To know whether or not that is a strong relationship, you need to know how big a standard deviation of age at marriage is:</p>
 <pre class="r"><code> sd( d$MedianAgeMarriage )</code></pre>
@@ -1508,9 +1404,9 @@ shade( mu.PI , A_seq )</code></pre>
 
 precis(m5.2)</code></pre>
 <pre><code>##               mean         sd       5.5%     94.5%
-## a     5.514749e-06 0.10824634 -0.1729930 0.1730041
-## bM    3.500540e-01 0.12592732  0.1487979 0.5513102
-## sigma 9.102644e-01 0.08986217  0.7666473 1.0538815</code></pre>
+## a     5.113878e-06 0.10824586 -0.1729927 0.1730029
+## bM    3.500408e-01 0.12592666  0.1487857 0.5512960
+## sigma 9.102587e-01 0.08986077  0.7666438 1.0538735</code></pre>
 <pre class="r"><code># compute percentile interval of mean
 M_seq &lt;- seq( from=-3 , to=3.2 , length.out=30 )
 mu &lt;- link( m5.2 , data=list(M=M_seq) )
@@ -1596,11 +1492,16 @@ impliedConditionalIndependencies( DMA_dag2  )</code></pre>
         sigma ~ dexp( 1 )
     ) , data = d )
 precis( m5.3 )</code></pre>
-<pre><code>##                mean         sd       5.5%      94.5%
-## a      4.595125e-08 0.09707605 -0.1551462  0.1551463
-## bM    -6.538074e-02 0.15077310 -0.3063453  0.1755838
-## bA    -6.135135e-01 0.15098363 -0.8548145 -0.3722125
-## sigma  7.851182e-01 0.07784345  0.6607094  0.9095271</code></pre>
+<pre><code>##                mean         sd       5.5%
+## a      6.988300e-07 0.09707610 -0.1551457
+## bM    -6.538033e-02 0.15077318 -0.3063450
+## bA    -6.135133e-01 0.15098372 -0.8548144
+## sigma  7.851187e-01 0.07784357  0.6607097
+##            94.5%
+## a      0.1551471
+## bM     0.1755843
+## bA    -0.3722121
+## sigma  0.9095278</code></pre>
 <p>The posterior mean for marriage rate, bM, is now close to zero, with plenty of probability of both sides of zero. The posterior mean for age at marriage, bA, is essentially unchanged. It will help to visualize the posterior distributions for all three models, focusing just on the slope parameters βA and βM:</p>
 <pre class="r"><code>plot(coeftab(m5.1,m5.2,m5.3), par=c(&quot;bA&quot;,&quot;bM&quot;))</code></pre>
 <p><img src="index_files/figure-html/compare%20coefficients-1.png" width="672" /></p>
@@ -2095,10 +1996,14 @@ dd &lt;-
     ) , data=dd )
 
  precis( m8.1 )</code></pre>
-<pre><code>##              mean          sd        5.5%      94.5%
-## a     1.000000079 0.010412512  0.98335887 1.01664128
-## b     0.002001904 0.054796238 -0.08557307 0.08957688
-## sigma 0.136504552 0.007397121  0.12468252 0.14832658</code></pre>
+<pre><code>##              mean          sd        5.5%
+## a     1.000000079 0.010412512  0.98335887
+## b     0.002001904 0.054796238 -0.08557307
+## sigma 0.136504552 0.007397121  0.12468252
+##            94.5%
+## a     1.01664128
+## b     0.08957688
+## sigma 0.14832658</code></pre>
 <p><img src="index_files/figure-html/m8.1%20plot-1.png" width="672" /></p>
 <p>Really no overall association between terrain ruggedness and log GDP.</p>
 <p>Next we’ll see how to split apart the continents.</p>
@@ -2125,16 +2030,24 @@ sigma ~ dexp( 1 )
 ) , data=dd )
 
 precis( m8.2 , depth=2 )</code></pre>
-<pre><code>##              mean          sd       5.5%      94.5%
-## a[1]   0.88041284 0.015937003  0.8549424 0.90588325
-## a[2]   1.04916425 0.010185554  1.0328858 1.06544274
-## b     -0.04651347 0.045686725 -0.1195297 0.02650274
-## sigma  0.11238738 0.006091077  0.1026527 0.12212209</code></pre>
+<pre><code>##              mean          sd       5.5%
+## a[1]   0.88041284 0.015937003  0.8549424
+## a[2]   1.04916425 0.010185554  1.0328858
+## b     -0.04651347 0.045686725 -0.1195297
+## sigma  0.11238738 0.006091077  0.1026527
+##            94.5%
+## a[1]  0.90588325
+## a[2]  1.06544274
+## b     0.02650274
+## sigma 0.12212209</code></pre>
 <p>The parameter a[1] is the intercept for African nations. It seems reliably lower than a[2].</p>
 <p>Now to compare these models, using WAIC:</p>
-<pre><code>##           WAIC       SE    dWAIC      dSE    pWAIC       weight
-## m8.2 -252.2687 15.30518  0.00000       NA 4.258517 1.000000e+00
-## m8.1 -188.7544 13.29153 63.51424 15.14616 2.690177 1.614571e-14</code></pre>
+<pre><code>##           WAIC       SE    dWAIC      dSE    pWAIC
+## m8.2 -252.2687 15.30518  0.00000       NA 4.258517
+## m8.1 -188.7544 13.29153 63.51424 15.14616 2.690177
+##            weight
+## m8.2 1.000000e+00
+## m8.1 1.614571e-14</code></pre>
 <p>m8.2 gets all the model weight. And while the standard error of the difference in WAIC is 15, the difference itself is 64. So the continent variable seems to be picking up some important association in the sample.</p>
 <p>Let’s plot the posterior predictions for m8.2, so you can see how, despite it’s predictive superiority to m8.1, it still doesn’t manage different slopes inside and outside of Africa. African nations are shown in blue, while nations outside Africa are shown in gray. What you’ve ended up with here is a rather weak negative relationship between economic development and ruggedness. The African nations do have lower overall economic development, and so the blue regression line is below, but parallel to, the black line. All including a dummy variable for African nations has done is allow the model to predict a lower mean for African nations. It can’t do anything to the slope of the line. The fact that WAIC tells you that the model with the dummy variable is hugely better only indicates that African nations on average do have lower GDP.</p>
 <p><img src="notes%20screenshots/Screen%20Shot%202020-12-08%20at%2016.27.33.png" /></p>
@@ -2158,18 +2071,28 @@ precis( m8.2 , depth=2 )</code></pre>
 ) , data=dd )
 
 precis( m8.3 , depth=2 )</code></pre>
-<pre><code>##             mean          sd       5.5%       94.5%
-## a[1]   0.8865639 0.015675695  0.8615111  0.91161667
-## a[2]   1.0505698 0.009936606  1.0346892  1.06645039
-## b[1]   0.1325054 0.074204443  0.0139124  0.25109846
-## b[2]  -0.1425767 0.054749403 -0.2300768 -0.05507653
-## sigma  0.1094941 0.005935299  0.1000084  0.11897987</code></pre>
+<pre><code>##             mean          sd       5.5%
+## a[1]   0.8865639 0.015675695  0.8615111
+## a[2]   1.0505698 0.009936606  1.0346892
+## b[1]   0.1325054 0.074204443  0.0139124
+## b[2]  -0.1425767 0.054749403 -0.2300768
+## sigma  0.1094941 0.005935299  0.1000084
+##             94.5%
+## a[1]   0.91161667
+## a[2]   1.06645039
+## b[1]   0.25109846
+## b[2]  -0.05507653
+## sigma  0.11897987</code></pre>
 <p>The slope is essentially reversed inside Africa, 0.13 instead of −0.14.</p>
 <p>How much does allowing the slope to vary improve expected prediction? Let’s use PSIS to compare this new model to the previous two. You could use WAIC here as well. It’ll give almost identical results.</p>
-<pre><code>##           PSIS       SE    dPSIS       dSE    pPSIS       weight
-## m8.3 -258.9122 15.26994  0.00000        NA 5.248904 9.731544e-01
-## m8.2 -251.7313 15.27774  7.18088  6.563466 4.462810 2.684562e-02
-## m8.1 -188.7363 13.28687 70.17592 15.393216 2.681052 5.619209e-16</code></pre>
+<pre><code>##           PSIS       SE    dPSIS       dSE
+## m8.3 -258.9122 15.26994  0.00000        NA
+## m8.2 -251.7313 15.27774  7.18088  6.563466
+## m8.1 -188.7363 13.28687 70.17592 15.393216
+##         pPSIS       weight
+## m8.3 5.248904 9.731544e-01
+## m8.2 4.462810 2.684562e-02
+## m8.1 2.681052 5.619209e-16</code></pre>
 <p>Model family m8.3 has more than 95% of the weight. That’s very strong support for including the interaction effect, if prediction is our goal. But the modicum of weight given to m8.2 suggests that the posterior means for the slopes in m8.3 are a little overfit. And the standard error of the difference in PSIS between the top two models is almost the same as the difference itself.</p>
 <pre class="r"><code># plot Africa - cid=1
 d.A1 &lt;- dd[ dd$cid==1 , ]
@@ -2260,12 +2183,18 @@ a ~ dnorm( 0 , 1 ),
 c(b_PC,b_GC,b_U) ~ dnorm( 0 , 1 ),
 sigma ~ dexp( 1 ) ), data=d )
 precis(m6.12)</code></pre>
-<pre><code>##              mean         sd       5.5%        94.5%
-## a     -0.12197510 0.07192588 -0.2369265 -0.007023655
-## b_PC   1.01161103 0.06597258  0.9061741  1.117047948
-## b_GC  -0.04081373 0.09728716 -0.1962974  0.114669941
-## b_U    1.99648992 0.14770462  1.7604294  2.232550439
-## sigma  1.01959911 0.05080176  0.9384081  1.100790130</code></pre>
+<pre><code>##              mean         sd       5.5%
+## a     -0.12197510 0.07192588 -0.2369265
+## b_PC   1.01161103 0.06597258  0.9061741
+## b_GC  -0.04081373 0.09728716 -0.1962974
+## b_U    1.99648992 0.14770462  1.7604294
+## sigma  1.01959911 0.05080176  0.9384081
+##              94.5%
+## a     -0.007023655
+## b_PC   1.117047948
+## b_GC   0.114669941
+## b_U    2.232550439
+## sigma  1.100790130</code></pre>
 <p>And those are the slopes we simulated with.</p>
 <p>Rethinking: Statistical paradoxes and causal explanations. The grandparents example serves as an example of Simpson’s paradox: Including another predictor (P in this case) can reverse the direction of association between some other predictor (G) and the outcome (C). Usually, Simpson’s paradox is presented in cases where adding the new predictor helps us. But in this case, it misleads us. Simpson’s paradox is a statistical phenomenon. To know whether the reversal of the association correctly reflects causation, we need something more than just a statistical model.</p>
 </div>
@@ -2384,10 +2313,14 @@ precis( m6.3 )</code></pre>
 ## bF    8.618970e-01 0.08426088  0.7272318 0.9965621
 ## sigma 4.510179e-01 0.05870756  0.3571919 0.5448440</code></pre>
 <pre class="r"><code>precis( m6.4 )</code></pre>
-<pre><code>##                mean         sd       5.5%      94.5%
-## a      7.438895e-07 0.06661633 -0.1064650  0.1064665
-## bL    -9.024550e-01 0.07132848 -1.0164517 -0.7884583
-## sigma  3.804653e-01 0.04958259  0.3012227  0.4597078</code></pre>
+<pre><code>##                mean         sd       5.5%
+## a      7.438895e-07 0.06661633 -0.1064650
+## bL    -9.024550e-01 0.07132848 -1.0164517
+## sigma  3.804653e-01 0.04958259  0.3012227
+##            94.5%
+## a      0.1064665
+## bL    -0.7884583
+## sigma  0.4597078</code></pre>
 <p>The posterior distributions for bF and bL are essentially mirror images of one another. The posterior mean of bF is as positive as the mean of bL is negative. Both are narrow posterior distributions that lie almost entirely on one side or the other of zero. Given the strong association of each predictor with the outcome, we might conclude that both variables are reliable predictors of total energy in milk, across species. The more fat, the more kilocalories in the milk. The more lactose, the fewer kilocalories in milk. But watch what happens when we place both predictor variables in the same regression model:</p>
 <pre class="r"><code>m6.5 &lt;- quap(
     alist(
@@ -2400,11 +2333,16 @@ precis( m6.3 )</code></pre>
 ),
     data=d )
 precis( m6.5 )</code></pre>
-<pre><code>##                mean         sd        5.5%      94.5%
-## a     -3.172136e-07 0.06603577 -0.10553823  0.1055376
-## bF     2.434983e-01 0.18357865 -0.04989579  0.5368925
-## bL    -6.780825e-01 0.18377670 -0.97179320 -0.3843719
-## sigma  3.767418e-01 0.04918394  0.29813637  0.4553472</code></pre>
+<pre><code>##                mean         sd        5.5%
+## a     -3.172136e-07 0.06603577 -0.10553823
+## bF     2.434983e-01 0.18357865 -0.04989579
+## bL    -6.780825e-01 0.18377670 -0.97179320
+## sigma  3.767418e-01 0.04918394  0.29813637
+##            94.5%
+## a      0.1055376
+## bF     0.5368925
+## bL    -0.3843719
+## sigma  0.4553472</code></pre>
 <p>Now the posterior means of both bF and bL are closer to zero. And the standard deviations for both parameters are twice as large as in the bivariate models (m6.3 and m6.4).</p>
 <p>This is the same statistical phenomenon as in the leg length example. What has happened is that the variables perc.fat and perc.lactose contain much of the same information. They are almost substitutes for one another. As a result, when you include both in a regression, the posterior distribution ends up describing a long ridge of combinations of bF and bL that are equally plausible. In the case of the fat and lactose, these two variables form essentially a single axis of variation. The easiest way to see this is to use a pairs plot:</p>
 <pre class="r"><code> pairs( ~ kcal.per.g + perc.fat + perc.lactose , data=d , col=rangi2 )</code></pre>
@@ -2965,15 +2903,23 @@ summary(juul1.glm)</code></pre>
 ## -2.56180  -0.12461   0.02475   0.08055   2.86120  
 ## 
 ## Coefficients:
-##             Estimate Std. Error z value Pr(&gt;|z|)    
-## (Intercept) -13.7758     2.7630  -4.986 6.17e-07 ***
-## age           0.8603     0.2311   3.723 0.000197 ***
-## tanner2      -0.5211     1.4846  -0.351 0.725609    
-## tanner3       0.8264     1.2377   0.668 0.504313    
-## tanner4       2.5645     1.2172   2.107 0.035132 *  
-## tanner5       5.1897     1.4140   3.670 0.000242 ***
+##             Estimate Std. Error z value Pr(&gt;|z|)
+## (Intercept) -13.7758     2.7630  -4.986 6.17e-07
+## age           0.8603     0.2311   3.723 0.000197
+## tanner2      -0.5211     1.4846  -0.351 0.725609
+## tanner3       0.8264     1.2377   0.668 0.504313
+## tanner4       2.5645     1.2172   2.107 0.035132
+## tanner5       5.1897     1.4140   3.670 0.000242
+##                
+## (Intercept) ***
+## age         ***
+## tanner2        
+## tanner3        
+## tanner4     *  
+## tanner5     ***
 ## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## Signif. codes:  
+## 0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
 ## (Dispersion parameter for binomial family taken to be 1)
 ## 
@@ -3045,25 +2991,27 @@ summary(juul1.glm)</code></pre>
 <p><em>coefficient matrix</em></p>
 <pre class="r"><code>c1 &lt;- coef(juul1.glm)
 c1</code></pre>
-<pre><code>## (Intercept)         age     tanner2     tanner3     tanner4     tanner5 
-## -13.7758129   0.8603095  -0.5210667   0.8264390   2.5645049   5.1896586</code></pre>
+<pre><code>## (Intercept)         age     tanner2     tanner3 
+## -13.7758129   0.8603095  -0.5210667   0.8264390 
+##     tanner4     tanner5 
+##   2.5645049   5.1896586</code></pre>
 <p><em>variance_covariance matrix</em></p>
 <pre class="r"><code>v1 &lt;- vcov(juul1.glm)
 v1</code></pre>
-<pre><code>##             (Intercept)         age     tanner2    tanner3    tanner4
-## (Intercept)  7.63420854 -0.59398971 -0.08627975  0.2184034  0.4414426
-## age         -0.59398971  0.05338584 -0.08439333 -0.1117773 -0.1318233
-## tanner2     -0.08627975 -0.08439333  2.20415172  1.2019693  1.2336584
-## tanner3      0.21840340 -0.11177725  1.20196929  1.5319140  1.3012763
-## tanner4      0.44144258 -0.13182328  1.23365842  1.3012763  1.4816528
-## tanner5      0.69730303 -0.15481918  1.27001076  1.3494243  1.4075578
-##                tanner5
-## (Intercept)  0.6973030
-## age         -0.1548192
-## tanner2      1.2700108
-## tanner3      1.3494243
-## tanner4      1.4075578
-## tanner5      1.9993267</code></pre>
+<pre><code>##             (Intercept)         age     tanner2
+## (Intercept)  7.63420854 -0.59398971 -0.08627975
+## age         -0.59398971  0.05338584 -0.08439333
+## tanner2     -0.08627975 -0.08439333  2.20415172
+## tanner3      0.21840340 -0.11177725  1.20196929
+## tanner4      0.44144258 -0.13182328  1.23365842
+## tanner5      0.69730303 -0.15481918  1.27001076
+##                tanner3    tanner4    tanner5
+## (Intercept)  0.2184034  0.4414426  0.6973030
+## age         -0.1117773 -0.1318233 -0.1548192
+## tanner2      1.2019693  1.2336584  1.2700108
+## tanner3      1.5319140  1.3012763  1.3494243
+## tanner4      1.3012763  1.4816528  1.4075578
+## tanner5      1.3494243  1.4075578  1.9993267</code></pre>
 <p>We want to compare tanner4 to tanner5, so we only care about the last 2 columns.</p>
 <pre class="r"><code>#We set the other 4 columns to 0. We want to substract tanner4 from tanner5, so we multiply tanner4 by -1 and tanner5 by 1.
 
@@ -3183,7 +3131,8 @@ anova(main.model,full.model,test=&quot;Chisq&quot;)</code></pre>
 ## 1       605     414.05                       
 ## 2       601     404.92  4   9.1367  0.05777 .
 ## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+## Signif. codes:  
+## 0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
 <ul>
 <li><strong>LINEARITY</strong></li>
 </ul>
@@ -3242,7 +3191,8 @@ mod2.glm &lt;- glm(CHD~CAT+CHL+SMK+HPT,family=binomial,evans)
 
 hoslem.test(mod2.glm$y,fitted(mod2.glm))</code></pre>
 <pre><code>## 
-##  Hosmer and Lemeshow goodness of fit (GOF) test
+##  Hosmer and Lemeshow goodness of fit (GOF)
+##  test
 ## 
 ## data:  mod2.glm$y, fitted(mod2.glm)
 ## X-squared = 1.4748, df = 8, p-value = 0.9931</code></pre>
@@ -3256,8 +3206,10 @@ hoslem.test(mod2.glm$y,fitted(mod2.glm))</code></pre>
 <pre class="r"><code>plot(dffits(mod2.glm))</code></pre>
 <p><img src="index_files/figure-html/dfitts%20vs%20fit-1.png" width="672" /></p>
 <pre class="r"><code>which(dffits(mod2.glm)&gt;0.3)</code></pre>
-<pre><code>##  16  22  65 117 200 266 276 293 349 378 544 548 587 
-##  16  22  65 117 200 266 276 293 349 378 544 548 587</code></pre>
+<pre><code>##  16  22  65 117 200 266 276 293 349 378 544 548 
+##  16  22  65 117 200 266 276 293 349 378 544 548 
+## 587 
+## 587</code></pre>
 <pre class="r"><code>plot(predict(mod2.glm), dffits(mod2.glm))</code></pre>
 <p><img src="index_files/figure-html/dfitts%20vs%20fit-2.png" width="672" /></p>
 <ul>
@@ -3268,24 +3220,38 @@ hoslem.test(mod2.glm$y,fitted(mod2.glm))</code></pre>
 <pre class="r"><code>plot(dfbeta(mod2.glm)[,1])</code></pre>
 <p><img src="index_files/figure-html/dfbeta%20%20intercept-1.png" width="672" /></p>
 <pre class="r"><code>evans[order(dfbeta(mod2.glm)[,1])[1:6],]</code></pre>
-<pre><code>##        ID CHD CAT AGE CHL SMK ECG DBP SBP HPT CH  CC
-## 117  2891   1   1  56 331   1   0 110 190   1  1 331
-## 200  5131   1   1  52 306   1   0 108 178   1  1 306
-## 378 12051   1   0  67 357   0   0  90 129   0  0   0
-## 266  7051   1   1  67 319   0   0 104 182   1  1 319
-## 576 18131   1   1  56 283   1   0 100 188   1  1 283
-## 351 11361   1   1  76 279   1   0  96 136   1  1 279</code></pre>
+<pre><code>##        ID CHD CAT AGE CHL SMK ECG DBP SBP HPT CH
+## 117  2891   1   1  56 331   1   0 110 190   1  1
+## 200  5131   1   1  52 306   1   0 108 178   1  1
+## 378 12051   1   0  67 357   0   0  90 129   0  0
+## 266  7051   1   1  67 319   0   0 104 182   1  1
+## 576 18131   1   1  56 283   1   0 100 188   1  1
+## 351 11361   1   1  76 279   1   0  96 136   1  1
+##      CC
+## 117 331
+## 200 306
+## 378   0
+## 266 319
+## 576 283
+## 351 279</code></pre>
 <p><em>CAT</em></p>
 <pre class="r"><code>plot(dfbeta(mod2.glm)[,2])</code></pre>
 <p><img src="index_files/figure-html/dfbeta%20%20cat-1.png" width="672" /></p>
 <pre class="r"><code>evans[order(dfbeta(mod2.glm)[,2])[1:6],]</code></pre>
-<pre><code>##        ID CHD CAT AGE CHL SMK ECG DBP SBP HPT CH CC
-## 196  5071   1   0  63 145   1   0  96 162   1  0  0
-## 520 15851   1   0  72 174   1   1  78 192   1  0  0
-## 290  9071   1   0  55 175   1   0 108 160   1  0  0
-## 413 12911   1   0  66 180   1   1 104 162   1  0  0
-## 331 10231   1   0  71 184   1   0  90 160   1  0  0
-## 580 18171   1   0  43 189   1   0 106 154   1  0  0</code></pre>
+<pre><code>##        ID CHD CAT AGE CHL SMK ECG DBP SBP HPT CH
+## 196  5071   1   0  63 145   1   0  96 162   1  0
+## 520 15851   1   0  72 174   1   1  78 192   1  0
+## 290  9071   1   0  55 175   1   0 108 160   1  0
+## 413 12911   1   0  66 180   1   1 104 162   1  0
+## 331 10231   1   0  71 184   1   0  90 160   1  0
+## 580 18171   1   0  43 189   1   0 106 154   1  0
+##     CC
+## 196  0
+## 520  0
+## 290  0
+## 413  0
+## 331  0
+## 580  0</code></pre>
 <ul>
 <li><strong>MULTICOLLINEARITY</strong></li>
 </ul>
@@ -3293,8 +3259,10 @@ hoslem.test(mod2.glm$y,fitted(mod2.glm))</code></pre>
 <p><strong>vif</strong></p>
 <p>example diabetes</p>
 <pre class="r"><code>car::vif(model)</code></pre>
-<pre><code>## pregnant  glucose pressure  triceps  insulin     mass pedigree      age 
-## 1.892387 1.378937 1.191287 1.638865 1.384038 1.832416 1.031715 1.974053</code></pre>
+<pre><code>## pregnant  glucose pressure  triceps  insulin 
+## 1.892387 1.378937 1.191287 1.638865 1.384038 
+##     mass pedigree      age 
+## 1.832416 1.031715 1.974053</code></pre>
 </div>
 </div>
 <div id="poisson-regression" class="section level2">
@@ -3331,8 +3299,10 @@ hoslem.test(mod2.glm$y,fitted(mod2.glm))</code></pre>
 <p><strong>LOG LINK</strong></p>
 <p>This link function maps a parameter that is defined over only positive real values onto a linear model. What the log link effectively assumes is that the parameter’s value is the exponentiation of the linear model. <span class="math inline">\(log(\theta_i)= \beta_0 +\beta_ix_i\)</span></p>
 <p><strong>inverse link</strong>: exponentiate to solve for <span class="math inline">\(\theta_i\)</span>: <span class="math inline">\(\theta_i=e^{\beta_0 +\beta_ix_i}\)</span></p>
-<pre><code>## Warning: Removed 1 rows containing missing values (geom_hline).</code></pre>
-<pre><code>## Warning: Removed 6 row(s) containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 1 rows containing missing values
+## (geom_hline).</code></pre>
+<pre><code>## Warning: Removed 6 row(s) containing missing values
+## (geom_path).</code></pre>
 <p><img src="index_files/figure-html/log%20link-1.png" width="672" /></p>
 <p>Using a log link for a linear model (left) implies an exponential scaling of the outcome with the predictor variable (right). Another way to think of this relationship is to remember that logarithms are magnitudes. An increase of one unit on the log scale means an increase of an order of magnitude on the untransformed scale. And this fact is reflected in the widening intervals between the horizontal lines in the right-hand plot. While using a log link does solve the problem of constraining the parameter to be positive, it may also create a problem when the model is asked to predict well outside the range of data used to fit it. Exponential relationships grow, well, exponentially. Just like a linear model cannot be linear forever, an exponential model cannot be exponential forever. Human height cannot be linearly related to weight forever, because very heavy people stop getting taller and start getting wider. Likewise, the property damage caused by a hurricane may be approximately exponentially related to wind speed for smaller storms. But for very big storms, damage may be capped by the fact that everything gets destroyed.</p>
 </div>
@@ -3385,13 +3355,19 @@ summary(poisson.model)</code></pre>
 ## -3.6871  -1.6503  -0.4269   1.1902   4.2616  
 ## 
 ## Coefficients:
-##             Estimate Std. Error z value Pr(&gt;|z|)    
-## (Intercept)  3.69196    0.04541  81.302  &lt; 2e-16 ***
-## woolB       -0.20599    0.05157  -3.994 6.49e-05 ***
-## tensionM    -0.32132    0.06027  -5.332 9.73e-08 ***
-## tensionH    -0.51849    0.06396  -8.107 5.21e-16 ***
+##             Estimate Std. Error z value Pr(&gt;|z|)
+## (Intercept)  3.69196    0.04541  81.302  &lt; 2e-16
+## woolB       -0.20599    0.05157  -3.994 6.49e-05
+## tensionM    -0.32132    0.06027  -5.332 9.73e-08
+## tensionH    -0.51849    0.06396  -8.107 5.21e-16
+##                
+## (Intercept) ***
+## woolB       ***
+## tensionM    ***
+## tensionH    ***
 ## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## Signif. codes:  
+## 0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
 ## (Dispersion parameter for poisson family taken to be 1)
 ## 
@@ -3415,18 +3391,29 @@ summary(eba.glm)</code></pre>
 ## -2.63573  -0.67296  -0.03436   0.37258   1.85267  
 ## 
 ## Coefficients:
-##             Estimate Std. Error z value Pr(&gt;|z|)    
-## (Intercept)  -5.6321     0.2003 -28.125  &lt; 2e-16 ***
-## cityHorsens  -0.3301     0.1815  -1.818   0.0690 .  
-## cityKolding  -0.3715     0.1878  -1.978   0.0479 *  
-## cityVejle    -0.2723     0.1879  -1.450   0.1472    
-## age55-59      1.1010     0.2483   4.434 9.23e-06 ***
-## age60-64      1.5186     0.2316   6.556 5.53e-11 ***
-## age65-69      1.7677     0.2294   7.704 1.31e-14 ***
-## age70-74      1.8569     0.2353   7.891 3.00e-15 ***
-## age75+        1.4197     0.2503   5.672 1.41e-08 ***
+##             Estimate Std. Error z value Pr(&gt;|z|)
+## (Intercept)  -5.6321     0.2003 -28.125  &lt; 2e-16
+## cityHorsens  -0.3301     0.1815  -1.818   0.0690
+## cityKolding  -0.3715     0.1878  -1.978   0.0479
+## cityVejle    -0.2723     0.1879  -1.450   0.1472
+## age55-59      1.1010     0.2483   4.434 9.23e-06
+## age60-64      1.5186     0.2316   6.556 5.53e-11
+## age65-69      1.7677     0.2294   7.704 1.31e-14
+## age70-74      1.8569     0.2353   7.891 3.00e-15
+## age75+        1.4197     0.2503   5.672 1.41e-08
+##                
+## (Intercept) ***
+## cityHorsens .  
+## cityKolding *  
+## cityVejle      
+## age55-59    ***
+## age60-64    ***
+## age65-69    ***
+## age70-74    ***
+## age75+      ***
 ## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## Signif. codes:  
+## 0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
 ## (Dispersion parameter for poisson family taken to be 1)
 ## 
@@ -3496,7 +3483,8 @@ df.residual(eba.glm),lower=F) </code></pre>
 ## city    3   28.307 136.69   4.859   0.1824    
 ## age     5  126.515 230.90 103.068   &lt;2e-16 ***
 ## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+## Signif. codes:  
+## 0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
 <ul>
 <li><strong>TEST OVERDISPERSION</strong></li>
 </ul>
@@ -3786,11 +3774,16 @@ h1 &lt;- h0 + rnorm(N, 5 - 3*fungus)
 # compose a clean data frame
 d &lt;- data.frame( h0=h0 , h1=h1 , treatment=treatment , fungus=fungus ) 
 precis(d)</code></pre>
-<pre><code>##               mean        sd      5.5%    94.5%    histogram
-## h0         9.95978 2.1011623  6.570328 13.07874 ▁▂▂▂▇▃▂▃▁▁▁▁
-## h1        14.39920 2.6880870 10.618002 17.93369     ▁▁▃▇▇▇▁▁
-## treatment  0.50000 0.5025189  0.000000  1.00000   ▇▁▁▁▁▁▁▁▁▇
-## fungus     0.23000 0.4229526  0.000000  1.00000   ▇▁▁▁▁▁▁▁▁▂</code></pre>
+<pre><code>##               mean        sd      5.5%    94.5%
+## h0         9.95978 2.1011623  6.570328 13.07874
+## h1        14.39920 2.6880870 10.618002 17.93369
+## treatment  0.50000 0.5025189  0.000000  1.00000
+## fungus     0.23000 0.4229526  0.000000  1.00000
+##              histogram
+## h0        ▁▂▂▂▇▃▂▃▁▁▁▁
+## h1            ▁▁▃▇▇▇▁▁
+## treatment   ▇▁▁▁▁▁▁▁▁▇
+## fungus      ▇▁▁▁▁▁▁▁▁▂</code></pre>
 <p>We know that the plants at time t = 1 should be taller than at time t = 0, whatever scale they are measured on. So if we put the parameters on a scale of proportion of height at time t = 0, rather than on the absolute scale of the data, we can set the priors more easily. To make this simpler, let’s focus right now only on the height variables, ignoring the predictor variables. We might have a linear model like:</p>
 <p><span class="math inline">\(h_{1,i} \sim Normal(\mu_i, \sigma)\)</span> <span class="math inline">\(\mu_i= h_{0,i}*p\)</span></p>
 <p>where <span class="math inline">\(h_{0,i}\)</span> is plant i’s height at time t = 0, <span class="math inline">\(h_{1,i}\)</span> is plant i’s height at time t = 1, <span class="math inline">\(p= h_{1,i}/h_{0,i}\)</span> is a parameter measuring the proportion of h0,i that h1,i is. If p = 1,the plant has no change in height. We have to ensure that p &gt; 0, because it is a proportion, so we use a Log-Normal distribution as a prior, because it is always positive.</p>
@@ -3819,11 +3812,16 @@ bf ~ dnorm( 0 , 0.5 ),
 sigma ~ dexp( 1 )
 ), data=d ) 
 precis(m6.7)</code></pre>
-<pre><code>##              mean         sd        5.5%       94.5%
-## a      1.48139094 0.02451068  1.44221815  1.52056373
-## bt     0.00241255 0.02986963 -0.04532488  0.05014998
-## bf    -0.26671805 0.03654770 -0.32512833 -0.20830777
-## sigma  1.40879638 0.09862052  1.25118174  1.56641102</code></pre>
+<pre><code>##              mean         sd        5.5%
+## a      1.48139094 0.02451068  1.44221815
+## bt     0.00241255 0.02986963 -0.04532488
+## bf    -0.26671805 0.03654770 -0.32512833
+## sigma  1.40879638 0.09862052  1.25118174
+##             94.5%
+## a      1.52056373
+## bt     0.05014998
+## bf    -0.20830777
+## sigma  1.56641102</code></pre>
 <p>That a parameter is the same as p before. And it has nearly the same posterior. The marginal posterior for bt, the effect of treatment, is solidly zero, with a tight interval. The treatment is not associated with growth. The fungus seems to have hurt growth, however. Given that we know the treatment matters, because we built the simulation that way, what happened here?</p>
 <p>The problem is that fungus is mostly a consequence of treatment. This is to say that fungus is a post-treatment variable. So when we control for fungus, the model is implicitly answering the question: Once we already know whether or not a plant developed fungus, does soil treatment matter? The answer is “no,” because soil treatment has its effects on growth through reducing fungus. But we actually want to know, based on the design of the experiment, is the impact of treatment on growth. To measure this properly, we should omit the post-treatment variable fungus.</p>
 <p><strong>Trt no fungus model</strong></p>
@@ -3851,15 +3849,23 @@ precis(m6.8)</code></pre>
 <p>m6.6 is the model with just an intercept, m6.7 is the model that include both treatment and fungus (the post-treatment variable), and m6.8 is the model that includes treatment but omits fungus. It’s m6.8 that allows us to correctly infer the causal influence of treatment. However the model that conditions on fungus will make better predictions than the model that omits it.</p>
 <pre class="r"><code>set.seed(77)
 compare( m6.6 , m6.7 , m6.8 , func=WAIC )</code></pre>
-<pre><code>##          WAIC       SE    dWAIC      dSE    pWAIC       weight
-## m6.7 361.8901 14.26191  0.00000       NA 3.839493 1.000000e+00
-## m6.8 402.7753 11.28120 40.88517 10.47814 2.645589 1.324032e-09
-## m6.6 405.9174 11.66153 44.02729 12.23018 1.582861 2.751664e-10</code></pre>
+<pre><code>##          WAIC       SE    dWAIC      dSE    pWAIC
+## m6.7 361.8901 14.26191  0.00000       NA 3.839493
+## m6.8 402.7753 11.28120 40.88517 10.47814 2.645589
+## m6.6 405.9174 11.66153 44.02729 12.23018 1.582861
+##            weight
+## m6.7 1.000000e+00
+## m6.8 1.324032e-09
+## m6.6 2.751664e-10</code></pre>
 <pre class="r"><code>compare( m6.6 , m6.7 , m6.8 , func=PSIS )</code></pre>
-<pre><code>##          PSIS       SE    dPSIS      dSE    pPSIS       weight
-## m6.7 361.8546 14.24683  0.00000       NA 3.770466 1.000000e+00
-## m6.8 402.7944 11.24936 40.93980 10.43842 2.683834 1.288356e-09
-## m6.6 406.3763 11.85462 44.52163 12.29540 1.789302 2.149075e-10</code></pre>
+<pre><code>##          PSIS       SE    dPSIS      dSE    pPSIS
+## m6.7 361.8546 14.24683  0.00000       NA 3.770466
+## m6.8 402.7944 11.24936 40.93980 10.43842 2.683834
+## m6.6 406.3763 11.85462 44.52163 12.29540 1.789302
+##            weight
+## m6.7 1.000000e+00
+## m6.8 1.288356e-09
+## m6.6 2.149075e-10</code></pre>
 <p>The first column contains the WAIC values. Smaller values are better, and the models are ordered by WAIC, from best to worst. The model that includes the fungus variable has the smallest WAIC, as promised. The pWAIC column is the penalty term of WAIC. These values are close to, but slightly below, the number of dimensions in the posterior of each model, which is to be expected in linear regressions with regularizing priors.</p>
 <p>The dWAIC column is the difference between each model’s WAIC and the best WAIC in the set. So it’s zero for the best model and then the differences with the other models tell you how far apart each is from the top model. So m6.7 is about 40 units of deviance smaller than both other models. The intercept model, m6.6, is 3 units worse than m6.8. Are these big differences or small differences? One way to answer that is to ask a clearer question: Are the models easily distinguished by their expected out-of-sample accuracy? To answer that question, we need to consider the error in the WAIC estimates. Since we don’t have the target sample, these are just guesses, and we know from the simulations that there is a lot of variation in WAIC’s error.</p>
 <p>That is what the two standard error columns, SE and dSE, are there to help us with. SE is the approximate standard error of each WAIC. In a very approximate sense, we expect the uncertainty in out-of-sample accuracy to be normally distributed with mean equal to the reported WAIC value and a standard deviation equal to the standard error. When the sample is small, this approximation tends to dramatically underestimate the uncertainty. But it is still better than older criteria like AIC, which provide no way to gauge their uncertainty.</p>
@@ -3921,50 +3927,51 @@ g[block_id] ~ dnorm( 0 , sigma_g ),
 a_bar ~ dnorm( 0 , 1.5 ), 
 sigma_a ~ dexp(1),
 sigma_g ~ dexp(1)
-) , data=dat_list , chains=4 , cores=4 , log_lik=TRUE )</code></pre>
-<pre><code>## Running /Library/Frameworks/R.framework/Resources/bin/R CMD SHLIB foo.c
-## clang -mmacosx-version-min=10.13 -I&quot;/Library/Frameworks/R.framework/Resources/include&quot; -DNDEBUG   -I&quot;/Users/annakawiecki/Library/R/4.0/library/Rcpp/include/&quot;  -I&quot;/Users/annakawiecki/Library/R/4.0/library/RcppEigen/include/&quot;  -I&quot;/Users/annakawiecki/Library/R/4.0/library/RcppEigen/include/unsupported&quot;  -I&quot;/Users/annakawiecki/Library/R/4.0/library/BH/include&quot; -I&quot;/Users/annakawiecki/Library/R/4.0/library/StanHeaders/include/src/&quot;  -I&quot;/Users/annakawiecki/Library/R/4.0/library/StanHeaders/include/&quot;  -I&quot;/Users/annakawiecki/Library/R/4.0/library/RcppParallel/include/&quot;  -I&quot;/Users/annakawiecki/Library/R/4.0/library/rstan/include&quot; -DEIGEN_NO_DEBUG  -DBOOST_DISABLE_ASSERTS  -DBOOST_PENDING_INTEGER_LOG2_HPP  -DSTAN_THREADS  -DBOOST_NO_AUTO_PTR  -include &#39;/Users/annakawiecki/Library/R/4.0/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp&#39;  -D_REENTRANT -DRCPP_PARALLEL_USE_TBB=1   -I/usr/local/include   -fPIC  -Wall -g -O2  -c foo.c -o foo.o
-## In file included from &lt;built-in&gt;:1:
-## In file included from /Users/annakawiecki/Library/R/4.0/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
-## In file included from /Users/annakawiecki/Library/R/4.0/library/RcppEigen/include/Eigen/Dense:1:
-## In file included from /Users/annakawiecki/Library/R/4.0/library/RcppEigen/include/Eigen/Core:88:
-## /Users/annakawiecki/Library/R/4.0/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:613:1: error: unknown type name &#39;namespace&#39;
-## namespace Eigen {
-## ^
-## /Users/annakawiecki/Library/R/4.0/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:613:16: error: expected &#39;;&#39; after top level declarator
-## namespace Eigen {
-##                ^
-##                ;
-## In file included from &lt;built-in&gt;:1:
-## In file included from /Users/annakawiecki/Library/R/4.0/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
-## In file included from /Users/annakawiecki/Library/R/4.0/library/RcppEigen/include/Eigen/Dense:1:
-## /Users/annakawiecki/Library/R/4.0/library/RcppEigen/include/Eigen/Core:96:10: fatal error: &#39;complex&#39; file not found
-## #include &lt;complex&gt;
-##          ^~~~~~~~~
-## 3 errors generated.
-## make: *** [foo.o] Error 1</code></pre>
-<pre class="r"><code>precis( m13.4 , depth=2 )</code></pre>
-<pre><code>##                 mean        sd         5.5%       94.5%     n_eff     Rhat4
-## b[1]    -0.125913232 0.3011484 -0.608828182  0.36775636  483.1717 1.0032124
-## b[2]     0.403652630 0.2998719 -0.068407627  0.88414062  548.4357 1.0032057
-## b[3]    -0.467862272 0.3059507 -0.943378477  0.02007653  500.6336 1.0030729
-## b[4]     0.286083856 0.3018983 -0.184443902  0.76911265  495.1277 1.0040021
-## a[1]    -0.363950275 0.3530515 -0.934684899  0.20771924  514.1627 1.0037399
-## a[2]     4.622366910 1.1594589  3.001382126  6.68903730  987.0072 1.0007653
-## a[3]    -0.667508451 0.3703541 -1.269038377 -0.10086041  514.6205 1.0038607
-## a[4]    -0.673649695 0.3667265 -1.254428223 -0.08970823  510.6917 1.0071490
-## a[5]    -0.366050000 0.3592258 -0.963800920  0.18957304  510.0252 1.0026100
-## a[6]     0.573134256 0.3623334 -0.001626199  1.15081884  470.1910 1.0060076
-## a[7]     2.109056254 0.4502798  1.409618916  2.86597388  632.5678 1.0014041
-## g[1]    -0.167118640 0.2151784 -0.551514104  0.07416009  424.2009 1.0080475
-## g[2]     0.033759154 0.1672956 -0.208791781  0.32261510 1065.4964 1.0045885
-## g[3]     0.045321940 0.1707997 -0.193820062  0.33314478 1057.8866 1.0068240
-## g[4]     0.004726831 0.1741874 -0.259894873  0.28371434 1249.9164 1.0058218
-## g[5]    -0.026658355 0.1716848 -0.312587900  0.23944793  848.5860 1.0058942
-## g[6]     0.103998555 0.1841360 -0.125856124  0.44189551  584.7764 1.0175280
-## a_bar    0.599401869 0.7089551 -0.516870682  1.70144457  882.3666 1.0020749
-## sigma_a  1.987395434 0.6370508  1.212142011  3.11220061 1070.7464 0.9994312
-## sigma_g  0.209304001 0.1782357  0.028173766  0.51493395  241.0924 1.0293473</code></pre>
+) , data=dat_list , chains=4 , cores=4 , log_lik=TRUE )
+
+precis( m13.4 , depth=2 )</code></pre>
+<pre><code>##                mean        sd         5.5%
+## b[1]    -0.10124826 0.3053557 -0.599988266
+## b[2]     0.41667945 0.2964003 -0.059332218
+## b[3]    -0.44940929 0.3039887 -0.935869317
+## b[4]     0.30442424 0.2991428 -0.173903635
+## a[1]    -0.39141841 0.3689838 -0.969318767
+## a[2]     4.73606431 1.3903384  2.976406678
+## a[3]    -0.69082987 0.3643943 -1.266723924
+## a[4]    -0.69113383 0.3808186 -1.329870364
+## a[5]    -0.39166330 0.3629453 -0.960516242
+## a[6]     0.55515105 0.3633651 -0.002280948
+## a[7]     2.07103632 0.4486226  1.374554567
+## g[1]    -0.18193050 0.2359528 -0.624239436
+## g[2]     0.04313147 0.1909877 -0.229481521
+## g[3]     0.05930952 0.1998457 -0.228434516
+## g[4]     0.01117998 0.1830944 -0.272655270
+## g[5]    -0.03865676 0.1899832 -0.354934364
+## g[6]     0.12664018 0.2129068 -0.138566252
+## a_bar    0.52911792 0.7515498 -0.655309499
+## sigma_a  2.03422006 0.6282721  1.255848996
+## sigma_g  0.23244844 0.1762249  0.036870891
+##               94.5%     n_eff     Rhat4
+## b[1]     0.36821527  511.5624 1.0023727
+## b[2]     0.89117911  492.2715 1.0034232
+## b[3]     0.03024225  563.5923 1.0021906
+## b[4]     0.78439422  540.4035 1.0012139
+## a[1]     0.20803029  426.4350 1.0050357
+## a[2]     7.28247873  519.6222 1.0039290
+## a[3]    -0.09671538  513.4291 1.0025533
+## a[4]    -0.08286690  526.8306 1.0023224
+## a[5]     0.20333387  502.1100 1.0026139
+## a[6]     1.16108021  462.5864 1.0021142
+## a[7]     2.80961501  632.5729 1.0068721
+## g[1]     0.08397370  360.9650 1.0144347
+## g[2]     0.36745204  897.9314 1.0030724
+## g[3]     0.41355300  853.2379 1.0010708
+## g[4]     0.29740718  935.0779 1.0042088
+## g[5]     0.24001539  669.2640 1.0086246
+## g[6]     0.51087403  711.8568 0.9992035
+## a_bar    1.70517757 1054.2728 1.0031721
+## sigma_a  3.16839069  826.4445 1.0060021
+## sigma_g  0.55347382  256.2984 1.0112880</code></pre>
 <p><img src="index_files/figure-html/m13.4%20plot-1.png" width="672" /></p>
 <p>computing and plotting posterior predictions for actor number 2:</p>
 <ul>
@@ -3988,12 +3995,12 @@ p_ci &lt;- apply( p , 2 , PI )</code></pre>
 <pre class="r"><code>post &lt;- extract.samples(m13.4) 
 str(post)</code></pre>
 <pre><code>## List of 6
-##  $ b      : num [1:2000, 1:4] 0.123 -0.411 -0.258 -0.694 -0.174 ...
-##  $ a      : num [1:2000, 1:7] -0.268 -0.12 -0.416 0.215 -0.454 ...
-##  $ g      : num [1:2000, 1:6] -0.123 -0.2337 -0.1205 -0.0277 -0.4486 ...
-##  $ a_bar  : num [1:2000(1d)] 0.209 0.328 -0.196 0.554 1.715 ...
-##  $ sigma_a: num [1:2000(1d)] 2.11 1.78 1.73 1.08 2.88 ...
-##  $ sigma_g: num [1:2000(1d)] 0.175 0.174 0.231 0.186 0.418 ...
+##  $ b      : num [1:2000, 1:4] 0.191 -0.369 0.203 -0.119 0.255 ...
+##  $ a      : num [1:2000, 1:7] -0.7 -0.111 -0.394 -0.235 -0.234 ...
+##  $ g      : num [1:2000, 1:6] -0.0792 0.0328 0.0462 -0.0155 -0.3417 ...
+##  $ a_bar  : num [1:2000(1d)] 0.8 0.868 0.822 0.572 0.802 ...
+##  $ sigma_a: num [1:2000(1d)] 1.33 1.44 2.14 1.74 1.68 ...
+##  $ sigma_g: num [1:2000(1d)] 0.2679 0.1077 0.0716 0.0469 0.2615 ...
 ##  - attr(*, &quot;source&quot;)= chr &quot;ulam posterior: 2000 samples from m13.4&quot;</code></pre>
 <pre class="r"><code>#The a matrix has samples on the rows and actors on the columns. So to plot, for example, the density for actor 5:
  dens( post$a[,5] )</code></pre>
@@ -4126,23 +4133,32 @@ autoplot(window(ausbeer, start=1992)) +
 <p>We compute the forecast accuracy measures for this period.</p>
 <pre class="r"><code>beer3 &lt;- window(ausbeer, start=2008)
 accuracy(beerfit1, beer3)</code></pre>
-<pre><code>##                   ME     RMSE      MAE        MPE     MAPE     MASE        ACF1
-## Training set   0.000 43.62858 35.23438 -0.9365102 7.886776 2.463942 -0.10915105
-## Test set     -13.775 38.44724 34.82500 -3.9698659 8.283390 2.435315 -0.06905715
+<pre><code>##                   ME     RMSE      MAE        MPE
+## Training set   0.000 43.62858 35.23438 -0.9365102
+## Test set     -13.775 38.44724 34.82500 -3.9698659
+##                  MAPE     MASE        ACF1
+## Training set 7.886776 2.463942 -0.10915105
+## Test set     8.283390 2.435315 -0.06905715
 ##              Theil&#39;s U
 ## Training set        NA
 ## Test set      0.801254</code></pre>
 <pre class="r"><code>accuracy(beerfit2, beer3)</code></pre>
-<pre><code>##                       ME     RMSE      MAE         MPE     MAPE     MASE
-## Training set   0.4761905 65.31511 54.73016  -0.9162496 12.16415 3.827284
-## Test set     -51.4000000 62.69290 57.40000 -12.9549160 14.18442 4.013986
+<pre><code>##                       ME     RMSE      MAE
+## Training set   0.4761905 65.31511 54.73016
+## Test set     -51.4000000 62.69290 57.40000
+##                      MPE     MAPE     MASE
+## Training set  -0.9162496 12.16415 3.827284
+## Test set     -12.9549160 14.18442 4.013986
 ##                     ACF1 Theil&#39;s U
 ## Training set -0.24098292        NA
 ## Test set     -0.06905715  1.254009</code></pre>
 <pre class="r"><code>accuracy(beerfit3, beer3)</code></pre>
-<pre><code>##                     ME     RMSE  MAE        MPE     MAPE      MASE       ACF1
-## Training set -2.133333 16.78193 14.3 -0.5537713 3.313685 1.0000000 -0.2876333
-## Test set      5.200000 14.31084 13.4  1.1475536 3.168503 0.9370629  0.1318407
+<pre><code>##                     ME     RMSE  MAE        MPE
+## Training set -2.133333 16.78193 14.3 -0.5537713
+## Test set      5.200000 14.31084 13.4  1.1475536
+##                  MAPE      MASE       ACF1
+## Training set 3.313685 1.0000000 -0.2876333
+## Test set     3.168503 0.9370629  0.1318407
 ##              Theil&#39;s U
 ## Training set        NA
 ## Test set      0.298728</code></pre>

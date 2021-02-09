@@ -6,8 +6,6 @@ output:
   html_document:
     toc: yes
     toc_float: yes
-  pdf_document:
-    toc: yes
 ---
 
 ```{r global_options, include=FALSE}
