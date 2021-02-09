@@ -1,5 +1,10 @@
 name: "Epi curious: notes in epidemiology"
 output_dir: "."
+navbar:
+  title: "Epi curious"
+  left:
+    - text: "Home"
+      href: index.html
 output:
   html_document:
     theme: yeti
