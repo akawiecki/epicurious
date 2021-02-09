@@ -397,13 +397,15 @@ library(&quot;fpp2&quot;)</code></pre>
 </ul>
 <p><a href="https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/">Causal Inference: What If, by Miguel A. Hernán, James M. Robins</a></p>
 <p><a href="http://xcelab.net/rm/statistical-rethinking/">Statistical Rethinking: A Bayesian Course with Examples in R and Stan. Second edition, by Richard McElreath</a></p>
+<p><a href="https://www.rti.org/publication/modern-epidemiology-3rd-edition">Modern Epidemiology, by Rothman, Greenland, Lash</a></p>
 <p><a href="https://academic.oup.com/aje/article/155/2/176/108106">Causal Knowledge as a Prerequisite for Confounding Evaluation: An Application to Birth Defects Epidemiology, Hernàn 2002</a></p>
 <p><a href="https://projecteuclid.org/euclid.ssu/1255440554http://projecteuclid.org/euclid.ssu/1255440554">Causal inference in statistics: an overview, Pearl 2009</a></p>
 <p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2836213/">An introduction to causal inference, Pearl 2010</a></p>
 <ul>
 <li>Models</li>
 </ul>
-<p><a href="http://www.stat.columbia.edu/~gelman/arm/">Gelman and Hill 2005</a></p>
+<p><a href="http://www.stat.columbia.edu/~gelman/arm/">Data Analysis Using Regression and Multilevel/Hierarchical Models, by Gelman and Hill 2005</a></p>
+<p><a href="https://www.pearson.com/us/higher-education/program/Hogg-Probability-and-Statistical-Inference-9th-Edition/PGM91556.html">Probability and Statistical Inference, 9th edition, by Hogg, Tanis and Zimmerman</a></p>
 <p><a href="http://xcelab.net/rm/statistical-rethinking/">Statistical Rethinking: A Bayesian Course with Examples in R and Stan. Second edition, by Richard McElreath</a></p>
 <p><a href="https://online.stat.psu.edu/stat462/node/95/">STAT 462 Applied Regression Analysis</a></p>
 <ul>
@@ -480,7 +482,7 @@ library(&quot;fpp2&quot;)</code></pre>
 <p><span class="math display">\[\frac{cases}{exposed}\]</span></p>
 <div class="figure">
 <img src="notes%20screenshots/Screen%20Shot%202020-12-02%20at%2013.35.40.png" alt="" />
-<p class="caption">Relationship between incidence and prevalence. Gordis</p>
+<p class="caption">Relationship between incidence and prevalence. Epidemiology,5th edition, Leon Gordis</p>
 </div>
 </div>
 <div id="mortality" class="section level3">
@@ -527,7 +529,10 @@ library(&quot;fpp2&quot;)</code></pre>
 <li><strong>direct</strong></li>
 </ul>
 <p>Apply the specific subgroup rates of each population to a standard population and calculate the rate on the standard population.</p>
-<p><img src="notes%20screenshots/Screen%20Shot%202020-12-02%20at%2013.04.03.png" alt="direct adjusted example from Gordis" /> <img src="notes\ screenshots/Screen\ Shot\ 2020-12-02\ at\ 13.04.03.png" width="350px"></p>
+<div class="figure">
+<img src="notes%20screenshots/Screen%20Shot%202020-12-02%20at%2013.04.03.png" alt="" />
+<p class="caption">direct adjusted example from Epidemiology,5th edition, Leon Gordis</p>
+</div>
 <ul>
 <li><strong>indirect</strong></li>
 </ul>
@@ -536,7 +541,7 @@ library(&quot;fpp2&quot;)</code></pre>
 <p>Expected: Apply the general population rates to each specific subgroup and add all the cases Observed: add all the observed cases in each specific subgroup</p>
 <div class="figure">
 <img src="notes%20screenshots/Screen%20Shot%202020-12-02%20at%2013.08.05.png" alt="" />
-<p class="caption">indirect adjusted example from Gordis</p>
+<p class="caption">indirect adjusted example from Epidemiology,5th edition, Leon Gordis</p>
 </div>
 </div>
 </div>
@@ -658,7 +663,7 @@ library(&quot;fpp2&quot;)</code></pre>
 <p>The ppv of a test increased and the npv of a test decreases as the prevalence of the disease in the population increases.</p>
 <div class="figure">
 <img src="notes%20screenshots/Screen%20Shot%202020-12-09%20at%2016.24.46.png" alt="" />
-<p class="caption">Gordis</p>
+<p class="caption">Epidemiology,5th edition, Leon Gordis</p>
 </div>
 <ul>
 <li><p>specificity: for the same prevalence, a test with higher specificity has higher ppv.</p>
@@ -670,7 +675,7 @@ library(&quot;fpp2&quot;)</code></pre>
 </ul>
 <div class="figure">
 <img src="notes%20screenshots/Screen%20Shot%202020-12-09%20at%2016.23.06.png" alt="" />
-<p class="caption">Gordis</p>
+<p class="caption">Epidemiology,5th edition, Leon Gordis</p>
 </div>
 <p>TO IMPROVE PREDICTIVE VALUES:</p>
 <ul>
@@ -723,7 +728,7 @@ library(&quot;fpp2&quot;)</code></pre>
 <p><span class="math inline">\(P_E = \frac{[0.6 * 44] + [0.4 * 31]}{75}= \frac{26.4+ 12.4}{75}= 51.7\)</span></p>
 <div class="figure">
 <img src="notes%20screenshots/Screen%20Shot%202020-12-09%20at%2017.29.35.png" alt="" />
-<p class="caption">Gordis</p>
+<p class="caption">Epidemiology,5th edition, Leon Gordis</p>
 </div>
 <ul>
 <li>-1 = perfect disagreement</li>
@@ -756,7 +761,7 @@ library(&quot;fpp2&quot;)</code></pre>
 <p>npv <span class="math inline">\(P(D^-|T^-) = 0.98\)</span></p>
 <div class="figure">
 <img src="notes%20screenshots/Screen%20Shot%202020-12-09%20at%2018.06.46.png" alt="" />
-<p class="caption">Gordis</p>
+<p class="caption">Epidemiology,5th edition, Leon Gordis</p>
 </div>
 <ul>
 <li>After sequential testing: 505 individuals are positive in both tests</li>
@@ -792,7 +797,7 @@ library(&quot;fpp2&quot;)</code></pre>
 <p>npv test A <span class="math inline">\(P(D^-|T^-) = 0.97\)</span></p>
 <div class="figure">
 <img src="notes%20screenshots/Screen%20Shot%202020-12-09%20at%2018.27.34.png" alt="" />
-<p class="caption">Gordis</p>
+<p class="caption">Epidemiology,5th edition, Leon Gordis</p>
 </div>
 <ul>
 <li>After simultaneus testing:</li>
@@ -804,11 +809,11 @@ library(&quot;fpp2&quot;)</code></pre>
 <p>or <span class="math inline">\(P(A)+P(B)-P(A\cap B) = 0.8+0.9+ (0.8*0.9) = 0.98\)</span></p>
 <p><span class="math inline">\(T_{only A}^+ = 160-144=16\)</span></p>
 <p><span class="math inline">\(T_{only B}^+ = 180-144=36\)</span></p>
-<p><img src="notes%20screenshots/Screen%20Shot%202020-12-09%20at%2018.34.40.png" alt="Gordis" /> <strong>net specificity</strong></p>
+<p><img src="notes%20screenshots/Screen%20Shot%202020-12-09%20at%2018.34.40.png" alt="Epidemiology,5th edition, Leon Gordis" /> <strong>net specificity</strong></p>
 <p><span class="math inline">\(T_{AB}^-= 0.6*0.9 = 0.54\)</span></p>
 <div class="figure">
 <img src="notes%20screenshots/Screen%20Shot%202020-12-09%20at%2018.47.04.png" alt="" />
-<p class="caption">Gordis</p>
+<p class="caption">Epidemiology,5th edition, Leon Gordis</p>
 </div>
 <p>net ppv = <span class="math inline">\(196/564=0.35\)</span></p>
 <p>net npv = <span class="math inline">\(432/436=0.99\)</span></p>
@@ -859,7 +864,7 @@ library(&quot;fpp2&quot;)</code></pre>
 <li><p><strong>NOT necessary BUT sufficient</strong>: each factor alone is able to cause disease, but so can other factors. Ex: leukemia can be caused by radiation or benzene exposure</p></li>
 <li><p><strong>NOT necessary NOR sufficient</strong>: presence of the factor by itself does not cuase disease</p></li>
 </ol>
-<p><img src="notes%20screenshots/Screen%20Shot%202020-12-03%20at%2013.31.01.png" /> <img src="notes%20screenshots/Screen%20Shot%202020-12-03%20at%2013.31.41.png" alt="Gordis figure 14-12 to 14-15" /></p>
+<p><img src="notes%20screenshots/Screen%20Shot%202020-12-03%20at%2013.31.01.png" /> <img src="notes%20screenshots/Screen%20Shot%202020-12-03%20at%2013.31.41.png" alt="Epidemiology,5th edition, Leon Gordis figure 14-12 to 14-15" /></p>
 </div>
 <div id="direct-effect" class="section level3">
 <h3>direct effect</h3>
@@ -976,12 +981,12 @@ library(&quot;fpp2&quot;)</code></pre>
 <p><span class="math display">\[\frac{\frac{P(E^+|D^+)}{P(E^-|D^+)}}{\frac{P(E^+|D^-)}{P(E^-|D^-)}}=\frac{\frac{a}{c}}{\frac{b}{d}}=\frac{ad}{bc}=\frac{odds\:E^+\:in\:diseased\:population}{odds\:E^+\:in\:not\:diseased\:population}\]</span></p>
 <div class="figure">
 <img src="notes%20screenshots/Screen%20Shot%202020-12-02%20at%2016.17.24.png" alt="" />
-<p class="caption">A: cohort study, B: case-control study, Gordis Figure 11-5</p>
+<p class="caption">A: cohort study, B: case-control study, Epidemiology,5th edition, Leon Gordis Figure 11-5</p>
 </div>
 <p><strong>matched-pairs OR</strong>:</p>
 <div class="figure">
 <img src="notes%20screenshots/Screen%20Shot%202020-12-02%20at%2016.22.42.png" alt="" />
-<p class="caption">Gordis Figure 11-9</p>
+<p class="caption">Epidemiology,5th edition, Leon Gordis Figure 11-9</p>
 </div>
 <p><strong>ODDS RATIO CAN BE A GOOD ESTIMATE OF RELATIVE RISK</strong> When:</p>
 <p><span class="math display">\[\frac{P(D^+|E^+)}{P(D^+|E^-)}\approx\frac{\frac{P(D^+|E^+)}{P(D^-|E^+)}}{\frac{P(D^+|E^-)}{P(D^-|E^-)}}\]</span> <span class="math display">\[\frac{\frac{a}{a+b}}{\frac{c}{c+d}} \approx \frac{\frac{a}{b}}{\frac{c}{d}}\]</span></p>
@@ -994,7 +999,7 @@ library(&quot;fpp2&quot;)</code></pre>
 <p>When the disease does not occur frequently <span class="math inline">\(a+b \approx b\)</span> and <span class="math inline">\(c+d \approx d\)</span></p>
 <div class="figure">
 <img src="notes%20screenshots/Screen%20Shot%202020-12-03%20at%2010.47.42.png" alt="" />
-<p class="caption">Gordis Figure 11-6, 11-7</p>
+<p class="caption">Epidemiology,5th edition, Leon Gordis Figure 11-6, 11-7</p>
 </div>
 <ul>
 <li><p>The cases are representative, with regards to the history of exposure, of all the people with disease in the population from which the cases were drawn:</p></li>
@@ -1033,7 +1038,7 @@ library(&quot;fpp2&quot;)</code></pre>
 <p><span class="math display">\[{P(D^+|E^+)}-{P(D^+|E^-)}={\frac{a}{a+b}}-{\frac{c}{c+d}}={incidence\:in\:exposed\:population} -{incidence\:in\:unexposed\:population}\]</span></p>
 <p>as a proportion:</p>
 <p><span class="math display">\[\frac{{P(D^+|E^+)}-{P(D^+|E^-)}}{P(D^+|E^+)}=\frac{{\frac{a}{a+b}}-{\frac{c}{c+d}}}{\frac{a}{a+b}}=\frac{{incidence\:in\:exposed\:population} -{incidence\:in\:unexposed\:population}}{incidence\:in\:exposed\:population}\]</span> <span class="math display">\[\frac{{P(D^+|E^+)}/{P(D^+|E^-)}-{P(D^+|E^-)}/{P(D^+|E^-)}}{P(D^+|E^+){P(D^+|E^-)}}= \frac{RR - 1}{RR}= 1- 1/RR\]</span></p>
-<p><img src="notes%20screenshots/Screen%20Shot%202020-12-03%20at%2012.11.43.png" alt="Grodis figure 12-1" /> <img src="notes%20screenshots/Screen%20Shot%202020-12-03%20at%2012.13.13.png" alt="Gordis Table 12.1" /></p>
+<p><img src="notes%20screenshots/Screen%20Shot%202020-12-03%20at%2012.11.43.png" alt="Grodis figure 12-1" /> <img src="notes%20screenshots/Screen%20Shot%202020-12-03%20at%2012.13.13.png" alt="Epidemiology,5th edition, Leon Gordis Table 12.1" /></p>
 <p><strong>ATTRIBUTABLE FRACTIONS</strong></p>
 <ul>
 <li><p>Etiologic fraction: proportion of cases in exposed population where exposure has a biological role in the disease</p></li>
@@ -1048,7 +1053,7 @@ library(&quot;fpp2&quot;)</code></pre>
 <p><span class="math display">\[\frac{[P(D^+|E^+) * P(E^+) + P(D^+|E^-) * P(E^-)]-{P(D^+|E^-)}}{P(D^+|E^+) * P(E^+) + P(D^+|E^-) * P(E^-)}=\frac{[{\frac{a}{a+b} * \frac{a+b}{a+b+c+d} + \frac{a}{c+d} * \frac{c+d}{a+b+c+d}}]-{\frac{c}{c+d}}}{\frac{a}{a+b} * \frac{a+b}{a+b+c+d} + \frac{a}{c+d} * \frac{c+d}{a+b+c+d}}=\frac{{incidence\:in\:total\:population} -{incidence\:in\:unexposed\:population}}{incidence\:in\:total\:population}\]</span></p>
 <div class="figure">
 <img src="notes%20screenshots/Screen%20Shot%202020-12-03%20at%2012.58.29.png" alt="" />
-<p class="caption">Gordis formula 12-4</p>
+<p class="caption">Epidemiology,5th edition, Leon Gordis formula 12-4</p>
 </div>
 </div>
 </div>
@@ -1080,7 +1085,7 @@ library(&quot;fpp2&quot;)</code></pre>
 </ul>
 <div class="figure">
 <img src="notes%20screenshots/Screen%20Shot%202020-12-03%20at%2014.10.51.png" alt="" />
-<p class="caption">Gordis figure 15-9</p>
+<p class="caption">Epidemiology,5th edition, Leon Gordis figure 15-9</p>
 </div>
 </div>
 </div>
@@ -1418,9 +1423,9 @@ library(rethinking)
 data(WaffleDivorce) 
 d &lt;- WaffleDivorce
 # standardize variables
-d$D &lt;- standardize( d$Divorce )
-d$M &lt;- standardize( d$Marriage )
-d$A &lt;- standardize( d$MedianAgeMarriage )</code></pre>
+d$D &lt;- rethinking::standardize(d$Divorce)
+d$M &lt;- rethinking::standardize(d$Marriage)
+d$A &lt;- rethinking::standardize(d$MedianAgeMarriage)</code></pre>
 <p><strong>EXAMPLE 1</strong></p>
 <p>There are three observed variables in play: divorce rate (D), marriage rate (M), and the median age at marriage (A) in each State of the U.S. Both marriage rates and median age at marriage are great predictors of the divorce rate in a given State, but are these relationships causal?</p>
 <p>The rate at which adults marry (M) is a great predictor of divorce rate. But does marriage cause divorce? In a trivial sense it obviously does: One cannot get a divorce without first getting married. But there’s no reason high marriage rate must cause more divorce. It’s easy to imagine high marriage rate indicating high cultural valuation of marriage and therefore being associated with low divorce rate.</p>
@@ -1464,9 +1469,9 @@ d$A &lt;- standardize( d$MedianAgeMarriage )</code></pre>
 
 precis(m5.1)</code></pre>
 <pre><code>##                mean         sd       5.5%      94.5%
-## a     -3.448601e-08 0.09737878 -0.1556301  0.1556301
-## bA    -5.684034e-01 0.10999983 -0.7442044 -0.3926024
-## sigma  7.883259e-01 0.07801138  0.6636486  0.9130031</code></pre>
+## a     -1.565886e-08 0.09737878 -0.1556301  0.1556301
+## bA    -5.684034e-01 0.10999982 -0.7442044 -0.3926024
+## sigma  7.883258e-01 0.07801137  0.6636486  0.9130031</code></pre>
 <p>The outcome and the predictor are both standardized, the intercept α should end up very close to zero.</p>
 <p>What does the prior slope <span class="math inline">\(\beta_{A}\)</span> imply? If <span class="math inline">\(\beta_{A}\)</span> = 1, that would imply that a change of one standard deviation in age at marriage is associated likewise with a change of one standard deviation in divorce. To know whether or not that is a strong relationship, you need to know how big a standard deviation of age at marriage is:</p>
 <pre class="r"><code> sd( d$MedianAgeMarriage )</code></pre>
@@ -1502,10 +1507,10 @@ shade( mu.PI , A_seq )</code></pre>
 ) , data = d )
 
 precis(m5.2)</code></pre>
-<pre><code>##                mean         sd       5.5%     94.5%
-## a     -6.949586e-08 0.10824647 -0.1729988 0.1729987
-## bM     3.500541e-01 0.12592752  0.1487976 0.5513106
-## sigma  9.102659e-01 0.08986254  0.7666482 1.0538836</code></pre>
+<pre><code>##               mean         sd       5.5%     94.5%
+## a     5.514749e-06 0.10824634 -0.1729930 0.1730041
+## bM    3.500540e-01 0.12592732  0.1487979 0.5513102
+## sigma 9.102644e-01 0.08986217  0.7666473 1.0538815</code></pre>
 <pre class="r"><code># compute percentile interval of mean
 M_seq &lt;- seq( from=-3 , to=3.2 , length.out=30 )
 mu &lt;- link( m5.2 , data=list(M=M_seq) )
@@ -1592,10 +1597,10 @@ impliedConditionalIndependencies( DMA_dag2  )</code></pre>
     ) , data = d )
 precis( m5.3 )</code></pre>
 <pre><code>##                mean         sd       5.5%      94.5%
-## a     -1.233831e-07 0.09707616 -0.1551466  0.1551463
-## bM    -6.537281e-02 0.15077337 -0.3063378  0.1755922
-## bA    -6.135049e-01 0.15098394 -0.8548064 -0.3722034
-## sigma  7.851194e-01 0.07784375  0.6607101  0.9095287</code></pre>
+## a      4.595125e-08 0.09707605 -0.1551462  0.1551463
+## bM    -6.538074e-02 0.15077310 -0.3063453  0.1755838
+## bA    -6.135135e-01 0.15098363 -0.8548145 -0.3722125
+## sigma  7.851182e-01 0.07784345  0.6607094  0.9095271</code></pre>
 <p>The posterior mean for marriage rate, bM, is now close to zero, with plenty of probability of both sides of zero. The posterior mean for age at marriage, bA, is essentially unchanged. It will help to visualize the posterior distributions for all three models, focusing just on the slope parameters βA and βM:</p>
 <pre class="r"><code>plot(coeftab(m5.1,m5.2,m5.3), par=c(&quot;bA&quot;,&quot;bM&quot;))</code></pre>
 <p><img src="index_files/figure-html/compare%20coefficients-1.png" width="672" /></p>
@@ -1779,7 +1784,7 @@ precis( m5.3 )</code></pre>
 </ul>
 <div class="figure">
 <img src="notes%20screenshots/EPI%20205%20notes%20Sep%2028,%202018%20multadd.jpg" alt="" />
-<p class="caption">Gordis</p>
+<p class="caption">Epidemiology,5th edition, Leon Gordis</p>
 </div>
 <p>Example:</p>
 <p>A logistic regression is on the additive scale when it’s transformed:</p>
@@ -1825,7 +1830,7 @@ precis( m5.3 )</code></pre>
 <p>If <span class="math inline">\(\beta_B\)</span> in the presence of B but not A <span class="math inline">\(\ne\)</span> <span class="math inline">\(\beta_B+ \beta_{AB}\)</span> in the presence of B and A, that is, if the presence of B has a different effect on the different levels of A.</p>
 <div class="figure">
 <img src="notes%20screenshots/EPI%20205%20notes%20Sep%2028,%202018%20ex%20interaction.jpg" alt="" />
-<p class="caption">Gordis</p>
+<p class="caption">Epidemiology,5th edition, Leon Gordis</p>
 </div>
 </div>
 <div id="interaction-example-1" class="section level3">
@@ -2560,7 +2565,7 @@ precis( m6.5 )</code></pre>
 </ul>
 <div class="figure">
 <img src="notes%20screenshots/Screen%20Shot%202020-12-10%20at%2011.27.56.png" alt="" />
-<p class="caption">Gordis</p>
+<p class="caption">Epidemiology,5th edition, Leon Gordis</p>
 </div>
 <p>define population:</p>
 <ul>
@@ -2569,7 +2574,7 @@ precis( m6.5 )</code></pre>
 </ul>
 <div class="figure">
 <img src="notes%20screenshots/Screen%20Shot%202020-12-10%20at%2011.36.18.png" alt="" />
-<p class="caption">Gordis</p>
+<p class="caption">Epidemiology,5th edition, Leon Gordis</p>
 </div>
 <ul>
 <li><p><strong>prospective</strong>: enroll participants based on exposure status and follow up over time</p></li>
@@ -2580,7 +2585,7 @@ precis( m6.5 )</code></pre>
 </ul>
 <div class="figure">
 <img src="notes%20screenshots/Screen%20Shot%202020-12-10%20at%2011.34.46.png" alt="" />
-<p class="caption">Gordis</p>
+<p class="caption">Epidemiology,5th edition, Leon Gordis</p>
 </div>
 <p><strong>assumptions</strong></p>
 <ul>
@@ -2610,7 +2615,7 @@ precis( m6.5 )</code></pre>
 <p>By selecting the controls matching on time, we can interpret the odds ratio as a rate or risk measure, without making the rare disease assumption, by assuming only that the incidence is constant over time (see odds ratio section).</p>
 <div class="figure">
 <img src="notes%20screenshots/Screen%20Shot%202020-12-10%20at%2011.47.56.png" alt="" />
-<p class="caption">Gordis</p>
+<p class="caption">Epidemiology,5th edition, Leon Gordis</p>
 </div>
 </div>
 <div id="case-cohort" class="section level3">
@@ -2624,18 +2629,18 @@ precis( m6.5 )</code></pre>
 </ul>
 <div class="figure">
 <img src="notes%20screenshots/Screen%20Shot%202020-12-10%20at%2011.48.30.png" alt="" />
-<p class="caption">Gordis</p>
+<p class="caption">Epidemiology,5th edition, Leon Gordis</p>
 </div>
 </div>
 <div id="comparison-case-control-and-cohort" class="section level3">
 <h3><strong>comparison case-control and cohort</strong></h3>
 <div class="figure">
-<img src="notes%20screenshots/Gordis%20Epidemiology%205th_comparison.jpg" alt="" />
-<p class="caption">Gordis</p>
+<img src="/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes%20screenshots/Epidemiology,5th%20edition,%20Leon%20Gordis%20Epidemiology%205th_comparison.jpg" alt="" />
+<p class="caption">Epidemiology,5th edition, Leon Gordis</p>
 </div>
 <div class="figure">
 <img src="notes%20screenshots/Screen%20Shot%202020-12-10%20at%2011.03.54.png" alt="" />
-<p class="caption">Gordis: comparison case-control and cohort</p>
+<p class="caption">Epidemiology,5th edition, Leon Gordis: comparison case-control and cohort</p>
 </div>
 </div>
 </div>
@@ -2677,7 +2682,7 @@ precis( m6.5 )</code></pre>
 <p>The population is defined and the exposure/treatment is randomly allocated in the defined population.</p>
 <div class="figure">
 <img src="notes%20screenshots/Screen%20Shot%202020-12-10%20at%2012.21.14.png" alt="" />
-<p class="caption">Gordis</p>
+<p class="caption">Epidemiology,5th edition, Leon Gordis</p>
 </div>
 <p><strong>random allocation</strong></p>
 <p>Why is random allocation important? Because it decreases bias, and therefore it is easier to obtain an unbiased effect and to extrapolate the results to the general population:</p>
@@ -2694,7 +2699,7 @@ precis( m6.5 )</code></pre>
 <p>Goal: decrease the variation in an outcome due to a given factor: members of each stratum will be ore comparable to each other.</p>
 <div class="figure">
 <img src="notes%20screenshots/Screen%20Shot%202020-12-10%20at%2012.35.26.png" alt="" />
-<p class="caption">Gordis Figure 7-4</p>
+<p class="caption">Epidemiology,5th edition, Leon Gordis Figure 7-4</p>
 </div>
 <p><strong>limitations</strong>: there is a limit to the amount of variables you can stratify by, as you want at least 20 individuals in each group.</p>
 <p><strong>cons</strong>: it coplicates and delays randomization.</p>
@@ -3045,13 +3050,20 @@ c1</code></pre>
 <p><em>variance_covariance matrix</em></p>
 <pre class="r"><code>v1 &lt;- vcov(juul1.glm)
 v1</code></pre>
-<pre><code>##             (Intercept)         age     tanner2    tanner3    tanner4    tanner5
-## (Intercept)  7.63420854 -0.59398971 -0.08627975  0.2184034  0.4414426  0.6973030
-## age         -0.59398971  0.05338584 -0.08439333 -0.1117773 -0.1318233 -0.1548192
-## tanner2     -0.08627975 -0.08439333  2.20415172  1.2019693  1.2336584  1.2700108
-## tanner3      0.21840340 -0.11177725  1.20196929  1.5319140  1.3012763  1.3494243
-## tanner4      0.44144258 -0.13182328  1.23365842  1.3012763  1.4816528  1.4075578
-## tanner5      0.69730303 -0.15481918  1.27001076  1.3494243  1.4075578  1.9993267</code></pre>
+<pre><code>##             (Intercept)         age     tanner2    tanner3    tanner4
+## (Intercept)  7.63420854 -0.59398971 -0.08627975  0.2184034  0.4414426
+## age         -0.59398971  0.05338584 -0.08439333 -0.1117773 -0.1318233
+## tanner2     -0.08627975 -0.08439333  2.20415172  1.2019693  1.2336584
+## tanner3      0.21840340 -0.11177725  1.20196929  1.5319140  1.3012763
+## tanner4      0.44144258 -0.13182328  1.23365842  1.3012763  1.4816528
+## tanner5      0.69730303 -0.15481918  1.27001076  1.3494243  1.4075578
+##                tanner5
+## (Intercept)  0.6973030
+## age         -0.1548192
+## tanner2      1.2700108
+## tanner3      1.3494243
+## tanner4      1.4075578
+## tanner5      1.9993267</code></pre>
 <p>We want to compare tanner4 to tanner5, so we only care about the last 2 columns.</p>
 <pre class="r"><code>#We set the other 4 columns to 0. We want to substract tanner4 from tanner5, so we multiply tanner4 by -1 and tanner5 by 1.
 
@@ -3909,30 +3921,50 @@ g[block_id] ~ dnorm( 0 , sigma_g ),
 a_bar ~ dnorm( 0 , 1.5 ), 
 sigma_a ~ dexp(1),
 sigma_g ~ dexp(1)
-) , data=dat_list , chains=4 , cores=4 , log_lik=TRUE )
-
-precis( m13.4 , depth=2 )</code></pre>
-<pre><code>##                mean        sd         5.5%       94.5%     n_eff     Rhat4
-## b[1]    -0.10124826 0.3053557 -0.599988266  0.36821527  511.5624 1.0023727
-## b[2]     0.41667945 0.2964003 -0.059332218  0.89117911  492.2715 1.0034232
-## b[3]    -0.44940929 0.3039887 -0.935869317  0.03024225  563.5923 1.0021906
-## b[4]     0.30442424 0.2991428 -0.173903635  0.78439422  540.4035 1.0012139
-## a[1]    -0.39141841 0.3689838 -0.969318767  0.20803029  426.4350 1.0050357
-## a[2]     4.73606431 1.3903384  2.976406678  7.28247873  519.6222 1.0039290
-## a[3]    -0.69082987 0.3643943 -1.266723924 -0.09671538  513.4291 1.0025533
-## a[4]    -0.69113383 0.3808186 -1.329870364 -0.08286690  526.8306 1.0023224
-## a[5]    -0.39166330 0.3629453 -0.960516242  0.20333387  502.1100 1.0026139
-## a[6]     0.55515105 0.3633651 -0.002280948  1.16108021  462.5864 1.0021142
-## a[7]     2.07103632 0.4486226  1.374554567  2.80961501  632.5729 1.0068721
-## g[1]    -0.18193050 0.2359528 -0.624239436  0.08397370  360.9650 1.0144347
-## g[2]     0.04313147 0.1909877 -0.229481521  0.36745204  897.9314 1.0030724
-## g[3]     0.05930952 0.1998457 -0.228434516  0.41355300  853.2379 1.0010708
-## g[4]     0.01117998 0.1830944 -0.272655270  0.29740718  935.0779 1.0042088
-## g[5]    -0.03865676 0.1899832 -0.354934364  0.24001539  669.2640 1.0086246
-## g[6]     0.12664018 0.2129068 -0.138566252  0.51087403  711.8568 0.9992035
-## a_bar    0.52911792 0.7515498 -0.655309499  1.70517757 1054.2728 1.0031721
-## sigma_a  2.03422006 0.6282721  1.255848996  3.16839069  826.4445 1.0060021
-## sigma_g  0.23244844 0.1762249  0.036870891  0.55347382  256.2984 1.0112880</code></pre>
+) , data=dat_list , chains=4 , cores=4 , log_lik=TRUE )</code></pre>
+<pre><code>## Running /Library/Frameworks/R.framework/Resources/bin/R CMD SHLIB foo.c
+## clang -mmacosx-version-min=10.13 -I&quot;/Library/Frameworks/R.framework/Resources/include&quot; -DNDEBUG   -I&quot;/Users/annakawiecki/Library/R/4.0/library/Rcpp/include/&quot;  -I&quot;/Users/annakawiecki/Library/R/4.0/library/RcppEigen/include/&quot;  -I&quot;/Users/annakawiecki/Library/R/4.0/library/RcppEigen/include/unsupported&quot;  -I&quot;/Users/annakawiecki/Library/R/4.0/library/BH/include&quot; -I&quot;/Users/annakawiecki/Library/R/4.0/library/StanHeaders/include/src/&quot;  -I&quot;/Users/annakawiecki/Library/R/4.0/library/StanHeaders/include/&quot;  -I&quot;/Users/annakawiecki/Library/R/4.0/library/RcppParallel/include/&quot;  -I&quot;/Users/annakawiecki/Library/R/4.0/library/rstan/include&quot; -DEIGEN_NO_DEBUG  -DBOOST_DISABLE_ASSERTS  -DBOOST_PENDING_INTEGER_LOG2_HPP  -DSTAN_THREADS  -DBOOST_NO_AUTO_PTR  -include &#39;/Users/annakawiecki/Library/R/4.0/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp&#39;  -D_REENTRANT -DRCPP_PARALLEL_USE_TBB=1   -I/usr/local/include   -fPIC  -Wall -g -O2  -c foo.c -o foo.o
+## In file included from &lt;built-in&gt;:1:
+## In file included from /Users/annakawiecki/Library/R/4.0/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Users/annakawiecki/Library/R/4.0/library/RcppEigen/include/Eigen/Dense:1:
+## In file included from /Users/annakawiecki/Library/R/4.0/library/RcppEigen/include/Eigen/Core:88:
+## /Users/annakawiecki/Library/R/4.0/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:613:1: error: unknown type name &#39;namespace&#39;
+## namespace Eigen {
+## ^
+## /Users/annakawiecki/Library/R/4.0/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:613:16: error: expected &#39;;&#39; after top level declarator
+## namespace Eigen {
+##                ^
+##                ;
+## In file included from &lt;built-in&gt;:1:
+## In file included from /Users/annakawiecki/Library/R/4.0/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Users/annakawiecki/Library/R/4.0/library/RcppEigen/include/Eigen/Dense:1:
+## /Users/annakawiecki/Library/R/4.0/library/RcppEigen/include/Eigen/Core:96:10: fatal error: &#39;complex&#39; file not found
+## #include &lt;complex&gt;
+##          ^~~~~~~~~
+## 3 errors generated.
+## make: *** [foo.o] Error 1</code></pre>
+<pre class="r"><code>precis( m13.4 , depth=2 )</code></pre>
+<pre><code>##                 mean        sd         5.5%       94.5%     n_eff     Rhat4
+## b[1]    -0.125913232 0.3011484 -0.608828182  0.36775636  483.1717 1.0032124
+## b[2]     0.403652630 0.2998719 -0.068407627  0.88414062  548.4357 1.0032057
+## b[3]    -0.467862272 0.3059507 -0.943378477  0.02007653  500.6336 1.0030729
+## b[4]     0.286083856 0.3018983 -0.184443902  0.76911265  495.1277 1.0040021
+## a[1]    -0.363950275 0.3530515 -0.934684899  0.20771924  514.1627 1.0037399
+## a[2]     4.622366910 1.1594589  3.001382126  6.68903730  987.0072 1.0007653
+## a[3]    -0.667508451 0.3703541 -1.269038377 -0.10086041  514.6205 1.0038607
+## a[4]    -0.673649695 0.3667265 -1.254428223 -0.08970823  510.6917 1.0071490
+## a[5]    -0.366050000 0.3592258 -0.963800920  0.18957304  510.0252 1.0026100
+## a[6]     0.573134256 0.3623334 -0.001626199  1.15081884  470.1910 1.0060076
+## a[7]     2.109056254 0.4502798  1.409618916  2.86597388  632.5678 1.0014041
+## g[1]    -0.167118640 0.2151784 -0.551514104  0.07416009  424.2009 1.0080475
+## g[2]     0.033759154 0.1672956 -0.208791781  0.32261510 1065.4964 1.0045885
+## g[3]     0.045321940 0.1707997 -0.193820062  0.33314478 1057.8866 1.0068240
+## g[4]     0.004726831 0.1741874 -0.259894873  0.28371434 1249.9164 1.0058218
+## g[5]    -0.026658355 0.1716848 -0.312587900  0.23944793  848.5860 1.0058942
+## g[6]     0.103998555 0.1841360 -0.125856124  0.44189551  584.7764 1.0175280
+## a_bar    0.599401869 0.7089551 -0.516870682  1.70144457  882.3666 1.0020749
+## sigma_a  1.987395434 0.6370508  1.212142011  3.11220061 1070.7464 0.9994312
+## sigma_g  0.209304001 0.1782357  0.028173766  0.51493395  241.0924 1.0293473</code></pre>
 <p><img src="index_files/figure-html/m13.4%20plot-1.png" width="672" /></p>
 <p>computing and plotting posterior predictions for actor number 2:</p>
 <ul>
@@ -3956,12 +3988,12 @@ p_ci &lt;- apply( p , 2 , PI )</code></pre>
 <pre class="r"><code>post &lt;- extract.samples(m13.4) 
 str(post)</code></pre>
 <pre><code>## List of 6
-##  $ b      : num [1:2000, 1:4] -0.304 -0.245 -0.217 0.621 0.322 ...
-##  $ a      : num [1:2000, 1:7] -0.19 -0.513 -0.85 -1.034 -0.501 ...
-##  $ g      : num [1:2000, 1:6] -0.28 -0.18 -0.133 -0.527 -0.389 ...
-##  $ a_bar  : num [1:2000(1d)] 1.365 0.602 0.442 0.445 1.133 ...
-##  $ sigma_a: num [1:2000(1d)] 2.19 1.49 2.26 3.69 1.64 ...
-##  $ sigma_g: num [1:2000(1d)] 0.195 0.333 0.141 0.8 0.427 ...
+##  $ b      : num [1:2000, 1:4] 0.123 -0.411 -0.258 -0.694 -0.174 ...
+##  $ a      : num [1:2000, 1:7] -0.268 -0.12 -0.416 0.215 -0.454 ...
+##  $ g      : num [1:2000, 1:6] -0.123 -0.2337 -0.1205 -0.0277 -0.4486 ...
+##  $ a_bar  : num [1:2000(1d)] 0.209 0.328 -0.196 0.554 1.715 ...
+##  $ sigma_a: num [1:2000(1d)] 2.11 1.78 1.73 1.08 2.88 ...
+##  $ sigma_g: num [1:2000(1d)] 0.175 0.174 0.231 0.186 0.418 ...
 ##  - attr(*, &quot;source&quot;)= chr &quot;ulam posterior: 2000 samples from m13.4&quot;</code></pre>
 <pre class="r"><code>#The a matrix has samples on the rows and actors on the columns. So to plot, for example, the density for actor 5:
  dens( post$a[,5] )</code></pre>
@@ -4094,17 +4126,26 @@ autoplot(window(ausbeer, start=1992)) +
 <p>We compute the forecast accuracy measures for this period.</p>
 <pre class="r"><code>beer3 &lt;- window(ausbeer, start=2008)
 accuracy(beerfit1, beer3)</code></pre>
-<pre><code>##                   ME     RMSE      MAE        MPE     MAPE     MASE        ACF1 Theil&#39;s U
-## Training set   0.000 43.62858 35.23438 -0.9365102 7.886776 2.463942 -0.10915105        NA
-## Test set     -13.775 38.44724 34.82500 -3.9698659 8.283390 2.435315 -0.06905715  0.801254</code></pre>
+<pre><code>##                   ME     RMSE      MAE        MPE     MAPE     MASE        ACF1
+## Training set   0.000 43.62858 35.23438 -0.9365102 7.886776 2.463942 -0.10915105
+## Test set     -13.775 38.44724 34.82500 -3.9698659 8.283390 2.435315 -0.06905715
+##              Theil&#39;s U
+## Training set        NA
+## Test set      0.801254</code></pre>
 <pre class="r"><code>accuracy(beerfit2, beer3)</code></pre>
-<pre><code>##                       ME     RMSE      MAE         MPE     MAPE     MASE        ACF1 Theil&#39;s U
-## Training set   0.4761905 65.31511 54.73016  -0.9162496 12.16415 3.827284 -0.24098292        NA
-## Test set     -51.4000000 62.69290 57.40000 -12.9549160 14.18442 4.013986 -0.06905715  1.254009</code></pre>
+<pre><code>##                       ME     RMSE      MAE         MPE     MAPE     MASE
+## Training set   0.4761905 65.31511 54.73016  -0.9162496 12.16415 3.827284
+## Test set     -51.4000000 62.69290 57.40000 -12.9549160 14.18442 4.013986
+##                     ACF1 Theil&#39;s U
+## Training set -0.24098292        NA
+## Test set     -0.06905715  1.254009</code></pre>
 <pre class="r"><code>accuracy(beerfit3, beer3)</code></pre>
-<pre><code>##                     ME     RMSE  MAE        MPE     MAPE      MASE       ACF1 Theil&#39;s U
-## Training set -2.133333 16.78193 14.3 -0.5537713 3.313685 1.0000000 -0.2876333        NA
-## Test set      5.200000 14.31084 13.4  1.1475536 3.168503 0.9370629  0.1318407  0.298728</code></pre>
+<pre><code>##                     ME     RMSE  MAE        MPE     MAPE      MASE       ACF1
+## Training set -2.133333 16.78193 14.3 -0.5537713 3.313685 1.0000000 -0.2876333
+## Test set      5.200000 14.31084 13.4  1.1475536 3.168503 0.9370629  0.1318407
+##              Theil&#39;s U
+## Training set        NA
+## Test set      0.298728</code></pre>
 <p>It is obvious from the graph that the seasonal naïve method is best for these data, although it can still be improved, as we will discover later. Sometimes, different accuracy measures will lead to different results as to which forecast method is best. However, in this case, all of the results point to the seasonal naïve method as the best of these three methods for this data set.</p>
 </div>
 </div>

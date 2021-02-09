@@ -53,6 +53,8 @@ Ania Kawiecki
 
 [Statistical Rethinking: A Bayesian Course with Examples in R and Stan. Second edition, by Richard McElreath](http://xcelab.net/rm/statistical-rethinking/)
 
+[Modern Epidemiology, by Rothman, Greenland, Lash](https://www.rti.org/publication/modern-epidemiology-3rd-edition)
+
 [Causal Knowledge as a Prerequisite for Confounding Evaluation: An Application to Birth Defects Epidemiology, Hernàn 2002](https://academic.oup.com/aje/article/155/2/176/108106)
 
 [Causal inference in statistics: an overview, Pearl 2009](https://projecteuclid.org/euclid.ssu/1255440554http://projecteuclid.org/euclid.ssu/1255440554)
@@ -61,7 +63,9 @@ Ania Kawiecki
 
 * Models 
 
-[Gelman and Hill 2005](http://www.stat.columbia.edu/~gelman/arm/)
+[Data Analysis Using Regression and Multilevel/Hierarchical Models, by Gelman and Hill 2005](http://www.stat.columbia.edu/~gelman/arm/)
+
+[Probability and Statistical Inference, 9th edition, by Hogg, Tanis and Zimmerman](https://www.pearson.com/us/higher-education/program/Hogg-Probability-and-Statistical-Inference-9th-Edition/PGM91556.html)
 
 [Statistical Rethinking: A Bayesian Course with Examples in R and Stan. Second edition, by Richard McElreath](http://xcelab.net/rm/statistical-rethinking/)
 
