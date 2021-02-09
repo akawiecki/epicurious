@@ -1464,9 +1464,9 @@ d$A &lt;- standardize( d$MedianAgeMarriage )</code></pre>
 
 precis(m5.1)</code></pre>
 <pre><code>##                mean         sd       5.5%      94.5%
-## a     -1.167817e-06 0.09738099 -0.1556348  0.1556325
-## bA    -5.684180e-01 0.11000280 -0.7442237 -0.3926123
-## sigma  7.883493e-01 0.07801712  0.6636628  0.9130357</code></pre>
+## a     -3.448601e-08 0.09737878 -0.1556301  0.1556301
+## bA    -5.684034e-01 0.10999983 -0.7442044 -0.3926024
+## sigma  7.883259e-01 0.07801138  0.6636486  0.9130031</code></pre>
 <p>The outcome and the predictor are both standardized, the intercept α should end up very close to zero.</p>
 <p>What does the prior slope <span class="math inline">\(\beta_{A}\)</span> imply? If <span class="math inline">\(\beta_{A}\)</span> = 1, that would imply that a change of one standard deviation in age at marriage is associated likewise with a change of one standard deviation in divorce. To know whether or not that is a strong relationship, you need to know how big a standard deviation of age at marriage is:</p>
 <pre class="r"><code> sd( d$MedianAgeMarriage )</code></pre>
@@ -1503,9 +1503,9 @@ shade( mu.PI , A_seq )</code></pre>
 
 precis(m5.2)</code></pre>
 <pre><code>##                mean         sd       5.5%     94.5%
-## a     -2.618550e-06 0.10824642 -0.1730013 0.1729961
-## bM     3.500734e-01 0.12592732  0.1488172 0.5513295
-## sigma  9.102654e-01 0.08986239  0.7666479 1.0538829</code></pre>
+## a     -6.949586e-08 0.10824647 -0.1729988 0.1729987
+## bM     3.500541e-01 0.12592752  0.1487976 0.5513106
+## sigma  9.102659e-01 0.08986254  0.7666482 1.0538836</code></pre>
 <pre class="r"><code># compute percentile interval of mean
 M_seq &lt;- seq( from=-3 , to=3.2 , length.out=30 )
 mu &lt;- link( m5.2 , data=list(M=M_seq) )
@@ -1592,10 +1592,10 @@ impliedConditionalIndependencies( DMA_dag2  )</code></pre>
     ) , data = d )
 precis( m5.3 )</code></pre>
 <pre><code>##                mean         sd       5.5%      94.5%
-## a      1.821559e-05 0.09707654 -0.1551288  0.1551653
-## bM    -6.543766e-02 0.15077338 -0.3064026  0.1755273
-## bA    -6.135427e-01 0.15098413 -0.8548445 -0.3722409
-## sigma  7.851233e-01 0.07784470  0.6607125  0.9095342</code></pre>
+## a     -1.233831e-07 0.09707616 -0.1551466  0.1551463
+## bM    -6.537281e-02 0.15077337 -0.3063378  0.1755922
+## bA    -6.135049e-01 0.15098394 -0.8548064 -0.3722034
+## sigma  7.851194e-01 0.07784375  0.6607101  0.9095287</code></pre>
 <p>The posterior mean for marriage rate, bM, is now close to zero, with plenty of probability of both sides of zero. The posterior mean for age at marriage, bA, is essentially unchanged. It will help to visualize the posterior distributions for all three models, focusing just on the slope parameters βA and βM:</p>
 <pre class="r"><code>plot(coeftab(m5.1,m5.2,m5.3), par=c(&quot;bA&quot;,&quot;bM&quot;))</code></pre>
 <p><img src="index_files/figure-html/compare%20coefficients-1.png" width="672" /></p>
@@ -3045,20 +3045,13 @@ c1</code></pre>
 <p><em>variance_covariance matrix</em></p>
 <pre class="r"><code>v1 &lt;- vcov(juul1.glm)
 v1</code></pre>
-<pre><code>##             (Intercept)         age     tanner2    tanner3    tanner4
-## (Intercept)  7.63420854 -0.59398971 -0.08627975  0.2184034  0.4414426
-## age         -0.59398971  0.05338584 -0.08439333 -0.1117773 -0.1318233
-## tanner2     -0.08627975 -0.08439333  2.20415172  1.2019693  1.2336584
-## tanner3      0.21840340 -0.11177725  1.20196929  1.5319140  1.3012763
-## tanner4      0.44144258 -0.13182328  1.23365842  1.3012763  1.4816528
-## tanner5      0.69730303 -0.15481918  1.27001076  1.3494243  1.4075578
-##                tanner5
-## (Intercept)  0.6973030
-## age         -0.1548192
-## tanner2      1.2700108
-## tanner3      1.3494243
-## tanner4      1.4075578
-## tanner5      1.9993267</code></pre>
+<pre><code>##             (Intercept)         age     tanner2    tanner3    tanner4    tanner5
+## (Intercept)  7.63420854 -0.59398971 -0.08627975  0.2184034  0.4414426  0.6973030
+## age         -0.59398971  0.05338584 -0.08439333 -0.1117773 -0.1318233 -0.1548192
+## tanner2     -0.08627975 -0.08439333  2.20415172  1.2019693  1.2336584  1.2700108
+## tanner3      0.21840340 -0.11177725  1.20196929  1.5319140  1.3012763  1.3494243
+## tanner4      0.44144258 -0.13182328  1.23365842  1.3012763  1.4816528  1.4075578
+## tanner5      0.69730303 -0.15481918  1.27001076  1.3494243  1.4075578  1.9993267</code></pre>
 <p>We want to compare tanner4 to tanner5, so we only care about the last 2 columns.</p>
 <pre class="r"><code>#We set the other 4 columns to 0. We want to substract tanner4 from tanner5, so we multiply tanner4 by -1 and tanner5 by 1.
 
@@ -3919,27 +3912,27 @@ sigma_g ~ dexp(1)
 ) , data=dat_list , chains=4 , cores=4 , log_lik=TRUE )
 
 precis( m13.4 , depth=2 )</code></pre>
-<pre><code>##                mean        sd        5.5%       94.5%     n_eff    Rhat4
-## b[1]    -0.11313378 0.2994842 -0.56736626  0.36216651  530.9201 1.005944
-## b[2]     0.41484801 0.3072984 -0.06134618  0.91222316  457.1542 1.006079
-## b[3]    -0.45242856 0.3016649 -0.93501529  0.04024289  509.8297 1.007060
-## b[4]     0.29572234 0.3002147 -0.16992128  0.79321886  559.9583 1.008623
-## a[1]    -0.38397215 0.3625454 -0.97937299  0.17891527  465.7727 1.004672
-## a[2]     4.58870853 1.2190650  2.96023315  6.73313263 1041.8122 1.002441
-## a[3]    -0.68379833 0.3614917 -1.27640399 -0.13190054  488.5157 1.003387
-## a[4]    -0.68856332 0.3689351 -1.29552595 -0.12984335  540.0827 1.001998
-## a[5]    -0.37777783 0.3571678 -0.94649853  0.18815734  441.8281 1.004621
-## a[6]     0.56704326 0.3634753 -0.01929119  1.13996789  444.9970 1.005201
-## a[7]     2.08755254 0.4630353  1.36063439  2.83129087  645.8250 1.004894
-## g[1]    -0.16786921 0.2096114 -0.56457533  0.07732807  488.5842 1.003115
-## g[2]     0.04075829 0.1801517 -0.22951777  0.33540151 1073.7119 1.000451
-## g[3]     0.05730518 0.1825078 -0.19744546  0.37367544  677.8763 1.002223
-## g[4]     0.01359270 0.1658458 -0.23168756  0.28364144 1183.4456 1.000367
-## g[5]    -0.02621294 0.1686431 -0.32110410  0.22657078 1100.8752 1.000164
-## g[6]     0.11378798 0.1879611 -0.10752507  0.46009875  712.5907 1.002426
-## a_bar    0.56719916 0.7240903 -0.58704056  1.72022372  856.1618 1.000126
-## sigma_a  1.98309010 0.6035389  1.18874331  3.10480024 1078.6780 1.001276
-## sigma_g  0.20979765 0.1708190  0.03778379  0.50538341  359.1150 1.009165</code></pre>
+<pre><code>##                mean        sd         5.5%       94.5%     n_eff     Rhat4
+## b[1]    -0.10124826 0.3053557 -0.599988266  0.36821527  511.5624 1.0023727
+## b[2]     0.41667945 0.2964003 -0.059332218  0.89117911  492.2715 1.0034232
+## b[3]    -0.44940929 0.3039887 -0.935869317  0.03024225  563.5923 1.0021906
+## b[4]     0.30442424 0.2991428 -0.173903635  0.78439422  540.4035 1.0012139
+## a[1]    -0.39141841 0.3689838 -0.969318767  0.20803029  426.4350 1.0050357
+## a[2]     4.73606431 1.3903384  2.976406678  7.28247873  519.6222 1.0039290
+## a[3]    -0.69082987 0.3643943 -1.266723924 -0.09671538  513.4291 1.0025533
+## a[4]    -0.69113383 0.3808186 -1.329870364 -0.08286690  526.8306 1.0023224
+## a[5]    -0.39166330 0.3629453 -0.960516242  0.20333387  502.1100 1.0026139
+## a[6]     0.55515105 0.3633651 -0.002280948  1.16108021  462.5864 1.0021142
+## a[7]     2.07103632 0.4486226  1.374554567  2.80961501  632.5729 1.0068721
+## g[1]    -0.18193050 0.2359528 -0.624239436  0.08397370  360.9650 1.0144347
+## g[2]     0.04313147 0.1909877 -0.229481521  0.36745204  897.9314 1.0030724
+## g[3]     0.05930952 0.1998457 -0.228434516  0.41355300  853.2379 1.0010708
+## g[4]     0.01117998 0.1830944 -0.272655270  0.29740718  935.0779 1.0042088
+## g[5]    -0.03865676 0.1899832 -0.354934364  0.24001539  669.2640 1.0086246
+## g[6]     0.12664018 0.2129068 -0.138566252  0.51087403  711.8568 0.9992035
+## a_bar    0.52911792 0.7515498 -0.655309499  1.70517757 1054.2728 1.0031721
+## sigma_a  2.03422006 0.6282721  1.255848996  3.16839069  826.4445 1.0060021
+## sigma_g  0.23244844 0.1762249  0.036870891  0.55347382  256.2984 1.0112880</code></pre>
 <p><img src="index_files/figure-html/m13.4%20plot-1.png" width="672" /></p>
 <p>computing and plotting posterior predictions for actor number 2:</p>
 <ul>
@@ -3963,12 +3956,12 @@ p_ci &lt;- apply( p , 2 , PI )</code></pre>
 <pre class="r"><code>post &lt;- extract.samples(m13.4) 
 str(post)</code></pre>
 <pre><code>## List of 6
-##  $ b      : num [1:2000, 1:4] -0.2048 -0.069 -0.306 0.0733 0.1287 ...
-##  $ a      : num [1:2000, 1:7] -0.329 -0.261 0.152 -0.767 -0.966 ...
-##  $ g      : num [1:2000, 1:6] -0.3382 -0.069 -0.6908 -0.0854 -0.3074 ...
-##  $ a_bar  : num [1:2000(1d)] -0.191 0.341 0.788 1.107 0.189 ...
-##  $ sigma_a: num [1:2000(1d)] 1.33 1.04 1.74 1.88 2.06 ...
-##  $ sigma_g: num [1:2000(1d)] 0.344 0.12 0.233 0.281 0.353 ...
+##  $ b      : num [1:2000, 1:4] -0.304 -0.245 -0.217 0.621 0.322 ...
+##  $ a      : num [1:2000, 1:7] -0.19 -0.513 -0.85 -1.034 -0.501 ...
+##  $ g      : num [1:2000, 1:6] -0.28 -0.18 -0.133 -0.527 -0.389 ...
+##  $ a_bar  : num [1:2000(1d)] 1.365 0.602 0.442 0.445 1.133 ...
+##  $ sigma_a: num [1:2000(1d)] 2.19 1.49 2.26 3.69 1.64 ...
+##  $ sigma_g: num [1:2000(1d)] 0.195 0.333 0.141 0.8 0.427 ...
 ##  - attr(*, &quot;source&quot;)= chr &quot;ulam posterior: 2000 samples from m13.4&quot;</code></pre>
 <pre class="r"><code>#The a matrix has samples on the rows and actors on the columns. So to plot, for example, the density for actor 5:
  dens( post$a[,5] )</code></pre>
@@ -4101,26 +4094,17 @@ autoplot(window(ausbeer, start=1992)) +
 <p>We compute the forecast accuracy measures for this period.</p>
 <pre class="r"><code>beer3 &lt;- window(ausbeer, start=2008)
 accuracy(beerfit1, beer3)</code></pre>
-<pre><code>##                   ME     RMSE      MAE        MPE     MAPE     MASE        ACF1
-## Training set   0.000 43.62858 35.23438 -0.9365102 7.886776 2.463942 -0.10915105
-## Test set     -13.775 38.44724 34.82500 -3.9698659 8.283390 2.435315 -0.06905715
-##              Theil&#39;s U
-## Training set        NA
-## Test set      0.801254</code></pre>
+<pre><code>##                   ME     RMSE      MAE        MPE     MAPE     MASE        ACF1 Theil&#39;s U
+## Training set   0.000 43.62858 35.23438 -0.9365102 7.886776 2.463942 -0.10915105        NA
+## Test set     -13.775 38.44724 34.82500 -3.9698659 8.283390 2.435315 -0.06905715  0.801254</code></pre>
 <pre class="r"><code>accuracy(beerfit2, beer3)</code></pre>
-<pre><code>##                       ME     RMSE      MAE         MPE     MAPE     MASE
-## Training set   0.4761905 65.31511 54.73016  -0.9162496 12.16415 3.827284
-## Test set     -51.4000000 62.69290 57.40000 -12.9549160 14.18442 4.013986
-##                     ACF1 Theil&#39;s U
-## Training set -0.24098292        NA
-## Test set     -0.06905715  1.254009</code></pre>
+<pre><code>##                       ME     RMSE      MAE         MPE     MAPE     MASE        ACF1 Theil&#39;s U
+## Training set   0.4761905 65.31511 54.73016  -0.9162496 12.16415 3.827284 -0.24098292        NA
+## Test set     -51.4000000 62.69290 57.40000 -12.9549160 14.18442 4.013986 -0.06905715  1.254009</code></pre>
 <pre class="r"><code>accuracy(beerfit3, beer3)</code></pre>
-<pre><code>##                     ME     RMSE  MAE        MPE     MAPE      MASE       ACF1
-## Training set -2.133333 16.78193 14.3 -0.5537713 3.313685 1.0000000 -0.2876333
-## Test set      5.200000 14.31084 13.4  1.1475536 3.168503 0.9370629  0.1318407
-##              Theil&#39;s U
-## Training set        NA
-## Test set      0.298728</code></pre>
+<pre><code>##                     ME     RMSE  MAE        MPE     MAPE      MASE       ACF1 Theil&#39;s U
+## Training set -2.133333 16.78193 14.3 -0.5537713 3.313685 1.0000000 -0.2876333        NA
+## Test set      5.200000 14.31084 13.4  1.1475536 3.168503 0.9370629  0.1318407  0.298728</code></pre>
 <p>It is obvious from the graph that the seasonal naïve method is best for these data, although it can still be improved, as we will discover later. Sometimes, different accuracy measures will lead to different results as to which forecast method is best. However, in this case, all of the results point to the seasonal naïve method as the best of these three methods for this data set.</p>
 </div>
 </div>

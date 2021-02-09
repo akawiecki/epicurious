@@ -159,7 +159,7 @@ Proportion of the exposed individuals that becomes affected during a time period
 
 $$\frac{cases}{exposed}$$
 
-![Relationship between incidence and prevalence. Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-02\ at\ 13.35.40.png)
+![Relationship between incidence and prevalence. Epidemiology,5th edition, Leon Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-02\ at\ 13.35.40.png)
 
 ### MORTALITY 
 
@@ -209,9 +209,7 @@ adjusted rates controlling for confounding factors to remove the effect of that 
 
 Apply the specific subgroup rates of each population to a standard population and calculate the rate on the standard population. 
 
-![direct adjusted example from Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-02\ at\ 13.04.03.png)
-<img src="notes\ screenshots/Screen\ Shot\ 2020-12-02\ at\ 13.04.03.png" width="350px">
-
+![direct adjusted example from Epidemiology,5th edition, Leon Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-02\ at\ 13.04.03.png)
 
 * **indirect** 
 
@@ -223,7 +221,7 @@ $$SMR= \frac{Observed}{Expected}$$
 Expected: Apply the general population rates to each specific subgroup and add all the cases
 Observed: add all the observed cases in each specific subgroup
 
-![indirect adjusted example from Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-02\ at\ 13.08.05.png)
+![indirect adjusted example from Epidemiology,5th edition, Leon Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-02\ at\ 13.08.05.png)
 
 ## DIAGNOSTIC TEST EVALUATION AND SCREENING TESTS
 
@@ -334,7 +332,7 @@ $$P(D^-|T^-)= \frac{P(T^- \cap D^-)}{P(T^-)}$$
 
 The ppv of a test increased and the npv of a test decreases as the prevalence of the disease in the population increases. 
 
-![Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-09\ at\ 16.24.46.png)
+![Epidemiology,5th edition, Leon Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-09\ at\ 16.24.46.png)
 
 * specificity: for the same prevalence, a test with higher specificity has higher ppv. 
 
@@ -345,7 +343,7 @@ The ppv of a test increased and the npv of a test decreases as the prevalence of
   Because disease are usually infrequent and there are more healthy individuals than diseases individuals, any increase in specifcity that affects the number of healthy individuals has a greater effect than finding diseased individuals. 
   
 
-![Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-09\ at\ 16.23.06.png)
+![Epidemiology,5th edition, Leon Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-09\ at\ 16.23.06.png)
 
  TO IMPROVE PREDICTIVE VALUES: 
  
@@ -384,7 +382,7 @@ Example: Pathologist A read 60% of all 75 slides (45 slides) as being grade II a
 
 $P_E = \frac{[0.6 * 44] + [0.4 * 31]}{75}= \frac{26.4+ 12.4}{75}= 51.7$
 
-![Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-09\ at\ 17.29.35.png)
+![Epidemiology,5th edition, Leon Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-09\ at\ 17.29.35.png)
 
 * -1 = perfect disagreement
 * 0 = agreement expected by chance
@@ -426,7 +424,7 @@ npv $P(D^-|T^-) = 0.98$
 
 
 
-![Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-09\ at\ 18.06.46.png)
+![Epidemiology,5th edition, Leon Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-09\ at\ 18.06.46.png)
 
 * After sequential testing: 505 individuals are positive in both tests
 
@@ -480,7 +478,7 @@ npv test A $P(D^-|T^-) = 0.97$
 
 
 
-![Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-09\ at\ 18.27.34.png)
+![Epidemiology,5th edition, Leon Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-09\ at\ 18.27.34.png)
 
 * After simultaneus testing:
 
@@ -499,12 +497,12 @@ $T_{only A}^+ =  160-144=16$
 $T_{only B}^+ =  180-144=36$
 
 
-![Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-09\ at\ 18.34.40.png)
+![Epidemiology,5th edition, Leon Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-09\ at\ 18.34.40.png)
 **net specificity**
 
 $T_{AB}^-= 0.6*0.9 = 0.54$ 
 
-![Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-09\ at\ 18.47.04.png)
+![Epidemiology,5th edition, Leon Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-09\ at\ 18.47.04.png)
 
 
 net ppv = $196/564=0.35$
@@ -611,7 +609,7 @@ disease always develops with this factor
 
 
 ![](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-03\ at\ 13.31.01.png)
-![Gordis figure 14-12 to 14-15](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-03\ at\ 13.31.41.png)
+![Epidemiology,5th edition, Leon Gordis figure 14-12 to 14-15](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-03\ at\ 13.31.41.png)
 
 ### direct effect
 
@@ -765,12 +763,12 @@ or
 
 $$\frac{\frac{P(E^+|D^+)}{P(E^-|D^+)}}{\frac{P(E^+|D^-)}{P(E^-|D^-)}}=\frac{\frac{a}{c}}{\frac{b}{d}}=\frac{ad}{bc}=\frac{odds\:E^+\:in\:diseased\:population}{odds\:E^+\:in\:not\:diseased\:population}$$
 
-![A: cohort study, B: case-control study, Gordis Figure 11-5 ](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-02\ at\ 16.17.24.png)
+![A: cohort study, B: case-control study, Epidemiology,5th edition, Leon Gordis Figure 11-5 ](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-02\ at\ 16.17.24.png)
 
 
 **matched-pairs OR**: 
 
-![Gordis Figure 11-9 ](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-02\ at\ 16.22.42.png)
+![Epidemiology,5th edition, Leon Gordis Figure 11-9 ](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-02\ at\ 16.22.42.png)
 
 
 **ODDS RATIO CAN BE A GOOD ESTIMATE OF RELATIVE RISK** When: 
@@ -783,7 +781,7 @@ $$\frac{\frac{a}{a+b}}{\frac{c}{c+d}} \approx \frac{\frac{a}{b}}{\frac{c}{d}}$$
 
 When the disease does not occur frequently $a+b \approx b$ and $c+d \approx d$
 
-![Gordis Figure 11-6, 11-7 ](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-03\ at\ 10.47.42.png)
+![Epidemiology,5th edition, Leon Gordis Figure 11-6, 11-7 ](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-03\ at\ 10.47.42.png)
 
 * The cases are representative, with regards to the history of exposure, of all the people with disease in the population from which the cases were drawn: 
 
@@ -841,7 +839,7 @@ $$\frac{{P(D^+|E^+)}-{P(D^+|E^-)}}{P(D^+|E^+)}=\frac{{\frac{a}{a+b}}-{\frac{c}{c
 $$\frac{{P(D^+|E^+)}/{P(D^+|E^-)}-{P(D^+|E^-)}/{P(D^+|E^-)}}{P(D^+|E^+){P(D^+|E^-)}}= \frac{RR - 1}{RR}= 1- 1/RR$$
 
 ![Grodis figure 12-1](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-03\ at\ 12.11.43.png)
-![Gordis Table 12.1](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-03\ at\ 12.13.13.png)
+![Epidemiology,5th edition, Leon Gordis Table 12.1](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-03\ at\ 12.13.13.png)
 
 **ATTRIBUTABLE FRACTIONS**
 
@@ -859,7 +857,7 @@ Incidence in the total population: $P(D^+|E^+) * P(E^+) + P(D^+|E^-) * P(E^-)= \
 
 $$\frac{[P(D^+|E^+) * P(E^+) + P(D^+|E^-) * P(E^-)]-{P(D^+|E^-)}}{P(D^+|E^+) * P(E^+) + P(D^+|E^-) * P(E^-)}=\frac{[{\frac{a}{a+b} * \frac{a+b}{a+b+c+d} + \frac{a}{c+d} * \frac{c+d}{a+b+c+d}}]-{\frac{c}{c+d}}}{\frac{a}{a+b} * \frac{a+b}{a+b+c+d} + \frac{a}{c+d} * \frac{c+d}{a+b+c+d}}=\frac{{incidence\:in\:total\:population} -{incidence\:in\:unexposed\:population}}{incidence\:in\:total\:population}$$
 
-![Gordis formula 12-4](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-03\ at\ 12.58.29.png)
+![Epidemiology,5th edition, Leon Gordis formula 12-4](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-03\ at\ 12.58.29.png)
 
 
 ## **ERROR IN INFERENCE**
@@ -888,7 +886,7 @@ the amount of systematic error. High validity indicates proximity to the true va
 
 * **internal validity**: comparability among the groups in the study
 
-![Gordis figure 15-9](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-03\ at\ 14.10.51.png)
+![Epidemiology,5th edition, Leon Gordis figure 15-9](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-03\ at\ 14.10.51.png)
 
 
 ## RANDOM ERROR
@@ -1507,9 +1505,9 @@ library(rethinking)
 data(WaffleDivorce) 
 d <- WaffleDivorce
 # standardize variables
-d$D <- standardize( d$Divorce )
-d$M <- standardize( d$Marriage )
-d$A <- standardize( d$MedianAgeMarriage )
+d$D <- rethinking::standardize(d$Divorce)
+d$M <- rethinking::standardize(d$Marriage)
+d$A <- rethinking::standardize(d$MedianAgeMarriage)
 ```
 
 
@@ -2031,7 +2029,7 @@ kable(tble)
 
 * **multiplicative**: Relative risk, logistic, Poisson and porportional hazards models all assume factors act multiplicatively unless an interaction effect is included. 
 
-![Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/EPI\ 205\ notes\ Sep\ 28\,\ 2018\ multadd.jpg)
+![Epidemiology,5th edition, Leon Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/EPI\ 205\ notes\ Sep\ 28\,\ 2018\ multadd.jpg)
 
 
 Example: 
@@ -2091,7 +2089,7 @@ We evaluate the crude effect measure and the effect measure stratified by the po
 If  $\beta_B$ in the presence of B but not A  $\ne$ $\beta_B+ \beta_{AB}$ in the presence of B and A, that is, if the presence of B has a different effect on the different levels of A. 
 
 
-![Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/EPI\ 205\ notes\ Sep\ 28\,\ 2018\ ex\ interaction.jpg)
+![Epidemiology,5th edition, Leon Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/EPI\ 205\ notes\ Sep\ 28\,\ 2018\ ex\ interaction.jpg)
 
 
 ### interaction example 1
@@ -3047,7 +3045,7 @@ the compared populations must be defined with care to make sure they are compara
 
   + time to event: survival analysis. 
 
-![Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-10\ at\ 11.27.56.png)
+![Epidemiology,5th edition, Leon Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-10\ at\ 11.27.56.png)
   
 
 define population:
@@ -3056,7 +3054,7 @@ define population:
  
 * randomly assigned individuals in the defined population $\to$ determine the development of disease and exposure status: : allows the study ofmultiple exposures and outcomes
 
-![Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-10\ at\ 11.36.18.png)
+![Epidemiology,5th edition, Leon Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-10\ at\ 11.36.18.png)
   
 * **prospective**: enroll participants based on exposure status and follow up over time
 
@@ -3065,7 +3063,7 @@ define population:
 
   + **cons**: recall bias. 
 
-![Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-10\ at\ 11.34.46.png)
+![Epidemiology,5th edition, Leon Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-10\ at\ 11.34.46.png)
 
 **assumptions**
 
@@ -3098,7 +3096,7 @@ By selecting the controls matching on time, we can interpret the odds ratio as a
 
 
 
-![Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-10\ at\ 11.47.56.png)
+![Epidemiology,5th edition, Leon Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-10\ at\ 11.47.56.png)
 
 
 ### case-cohort 
@@ -3109,13 +3107,13 @@ Controls selected by random allocation at the end of the study from non-cases in
 
   + Odds ratio (OR)
 
-![Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-10\ at\ 11.48.30.png)
+![Epidemiology,5th edition, Leon Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-10\ at\ 11.48.30.png)
 
 ### **comparison case-control and cohort**
 
-![Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Gordis\ Epidemiology\ 5th_comparison.jpg)
+![Epidemiology,5th edition, Leon Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Epidemiology,5th edition, Leon Gordis\ Epidemiology\ 5th_comparison.jpg)
 
-![Gordis: comparison case-control and cohort](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-10\ at\ 11.03.54.png)
+![Epidemiology,5th edition, Leon Gordis: comparison case-control and cohort](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-10\ at\ 11.03.54.png)
 
 ## **relationship between study design and effect measure**
 
@@ -3170,7 +3168,7 @@ Th goal is to test a hypothesis or answer a medical question
 
 The population is defined and the exposure/treatment is randomly allocated in the defined population. 
 
-![Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-10\ at\ 12.21.14.png)
+![Epidemiology,5th edition, Leon Gordis](/Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-10\ at\ 12.21.14.png)
 
 **random allocation**
 
@@ -3191,7 +3189,7 @@ Using data collected prior to the randomization, the participants are:
 
 Goal: decrease the variation in an outcome due to a given factor: members of each stratum will be ore comparable to each other. 
 
-![Gordis Figure 7-4]( /Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-10\ at\ 12.35.26.png)
+![Epidemiology,5th edition, Leon Gordis Figure 7-4]( /Users/annakawiecki/Documents/epi/akawiecki.webpage/epi_curious/epicurious/notes\ screenshots/Screen\ Shot\ 2020-12-10\ at\ 12.35.26.png)
 
 
 **limitations**: there is a limit to the amount of variables you can stratify by, as you want at least 20 individuals in each group. 
